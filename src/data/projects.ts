@@ -15,7 +15,7 @@ export const projects: Project[] = [
     id: '2',
     title: 'AjudaAqui',
     description: 'Sistema de gestão para prestação de serviços locais com geolocalização.',
-    technologies: ['React', 'Django', 'Python', 'PostgreSQL'],
+    technologies: ['React', 'Node', 'PostgreSQL'],
     liveUrl: 'https://ajudaaqui.pt/',
     image: '/Ajudaaqui.png',
     category: 'fullstack',
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     id: '3',
     title: 'OPAH',
     description: 'Plataforma empresarial para gestão de operações e recursos humanos.',
-    technologies: ['React', 'Django', 'MySQL', 'Linux'],
+    technologies: ['React', 'MySQL', 'Linux'],
     liveUrl: 'https://opah.pt/',
     image: '/opah.pt.png',
     category: 'fullstack',
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     id: '5',
     title: 'Dispatcheur-cc',
     description: 'WebAPP corporativo da empresa com integração de contact center e gestão empresarial KPI, Faturação e chamadas.',
-    technologies: ['React', 'Django', 'React Native', 'API'],
+    technologies: ['React', 'Nginx', 'React Native', 'API', 'Swagger','PostgreSQL','MySQL','Express','Linux', 'Node.js'],
     liveUrl: 'https://dispatcheur-cc.fr/',
     image: '/Dispatcheur.png',
     category: 'fullstack',
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     id: '6',
     title: 'Princesa Nails',
     description: 'Sistema de agendamento e gestão para salão de beleza.',
-    technologies: ['React', 'Vite', 'JavaScript', 'CSS'],
+    technologies: ['React', 'JavaScript', 'CSS'],
     liveUrl: 'https://princesanails.vercel.app/',
     image: '/Princesa.png',
     category: 'web',
@@ -96,5 +96,15 @@ export const projects: Project[] = [
     image: '/meu-irmao-z-3d.png',
     category: 'game',
     status: 'development'
-  }
+  },
+    {
+    id: '11',
+    title: 'Portfolio',
+    description: 'Meu portfólio pessoal, apresentando meus projetos e habilidades.',
+    technologies: ['React', 'Vite', 'JavaScript', 'CSS'],
+    liveUrl: 'https://portfoliokarimsantos.vercel.app/',
+    image: '/portfolio.png',
+    category: 'web',
+    status: 'live'
+  },
 ];
