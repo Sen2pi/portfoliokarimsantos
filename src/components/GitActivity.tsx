@@ -306,7 +306,7 @@ const GitActivity: React.FC = () => {
           className="text-center"
         >
           <a
-            href="https://github.com/seu-usuario"
+            href="https://github.com/sen2pi"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-mono transition-colors"
