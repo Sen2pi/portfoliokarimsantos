@@ -1,4 +1,3 @@
-  import React from 'react';
   import Header from './components/Header';
   import Hero from './components/Hero';
   import About from './components/About';
@@ -25,7 +24,7 @@
         <footer className="bg-gray-800 py-8 text-center border-t border-gray-700">
           <div className="container mx-auto px-6">
             <p className="text-gray-400 font-mono">
-              © 2025 Karim Santos. Feito com ❤️ em React + Vite + TypeScript
+              © 2025 Karim Santos. Feito em React + Vite + TypeScript
             </p>
             <p className="text-gray-500 text-sm mt-2">
               Engenheiro de Software | CEO | Full Stack Developer
