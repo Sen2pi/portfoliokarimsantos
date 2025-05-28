@@ -13,6 +13,7 @@ export const skills: Skill[] = [
   { name: 'Python', level: 90, category: 'backend', icon: 'python' },
   { name: 'Django', level: 85, category: 'backend', icon: 'django' },
   { name: 'Java', level: 80, category: 'backend', icon: 'java' },
+  { name: 'C#', level: 85, category: 'backend', icon: 'csharp' },
   { name: 'Node.js', level: 75, category: 'backend', icon: 'nodejs' },
 
   // Mobile
@@ -28,4 +29,5 @@ export const skills: Skill[] = [
   { name: 'Git', level: 85, category: 'tools', icon: 'git' },
   { name: 'Docker', level: 75, category: 'tools', icon: 'docker' },
   { name: 'NGINX', level: 80, category: 'tools', icon: 'nginx' },
+  { name: 'Unity', level: 80, category: 'tools', icon: 'unity' },
 ];

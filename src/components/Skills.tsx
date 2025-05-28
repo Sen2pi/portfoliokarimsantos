@@ -19,6 +19,8 @@ import {
   SiDocker,
   SiAndroid,
   SiNginx,
+  SiSharp,    // ✅ NOVO: Ícone do C#
+  SiUnity,     // ✅ NOVO: Ícone do Unity
 } from "react-icons/si";
 
 const Skills: React.FC = () => {
@@ -37,6 +39,7 @@ const Skills: React.FC = () => {
       typescript: <SiTypescript className="text-blue-500" />,
       python: <SiPython className="text-green-400" />,
       java: <SiCoffeescript className="text-red-500" />,
+      csharp: <SiSharp className="text-purple-600" />,     // ✅ NOVO
       kotlin: <SiKotlin className="text-purple-500" />,
       html5: <SiHtml5 className="text-orange-500" />,
       css3: <SiCss3 className="text-blue-500" />,
@@ -48,10 +51,12 @@ const Skills: React.FC = () => {
       git: <SiGit className="text-orange-600" />,
       docker: <SiDocker className="text-blue-400" />,
       android: <SiAndroid className="text-green-500" />,
-      nginx: <SiNginx className="text-green-600" />
+      nginx: <SiNginx className="text-green-600" />,
+      unity: <SiUnity className="text-gray-300" />          // ✅ NOVO
     };
-    return iconMap[iconName] || <span className="text-2xl">💻</span>; // ✅ CORRIGIDO
+    return iconMap[iconName] || <span className="text-2xl">💻</span>;
   };
+
 const languages = [
     { 
       lang: "Português", 

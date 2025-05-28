@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
     {
       icon: <MessageCircle size={24} />,
       label: 'WhatsApp',
-      url: 'https://wa.me/351YOUR_NUMBER',
+      url: 'https://wa.me/351925542328',
       color: 'hover:text-green-400'
     }
   ];

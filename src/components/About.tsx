@@ -6,8 +6,9 @@ const About: React.FC = () => {
   const personalInfo = [
     { icon: <User className="text-blue-400" size={20} />, label: 'Nome', value: 'Karim Hussen Patatas Hassam dos Santos' },
     { icon: <MapPin className="text-green-400" size={20} />, label: 'Localização', value: 'Golães, Fafe, Portugal' },
-    { icon: <Calendar className="text-purple-400" size={20} />, label: 'Experiência', value: '10+ anos em desenvolvimento' },
+    { icon: <Calendar className="text-purple-400" size={20} />, label: 'Experiência', value: '4+ anos em desenvolvimento' },
     { icon: <Award className="text-yellow-400" size={20} />, label: 'Certificação', value: 'Oracle Certified Professional' },
+    { icon: <Award className="text-yellow-400" size={20} />, label: 'Licenciatura', value: 'Licenciado em Informática' },
   ];
 
   const highlights = [
