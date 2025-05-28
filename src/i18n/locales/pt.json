@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Skills",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "name": "Karim Santos",
+    "title": "Engenheiro de Software & CEO",
+    "description": "Especialista em desenvolvimento web e mobile com experiência em liderança de equipas.",
+    "subtitle": "Criador de soluções inovadoras para contact centers e gestão empresarial.",
+    "viewProjects": "Ver Projetos",
+    "contact": "Contactar"
+  },
+  "about": {
+    "title": "Sobre",
+    "subtitle": "Conheça mais sobre minha trajetória e experiência profissional",
+    "description": "Engenheiro de Software e Desenvolvedor Web/Mobile com sólida experiência em programação, gestão de equipas e desenvolvimento de soluções inovadoras para contact centers e gestão empresarial."
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Tecnologias e ferramentas que domino para criar soluções completas",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "database": "Database",
+      "tools": "Tools & DevOps"
+    },
+    "languages": "Idiomas",
+    "proficiencyLevels": "Níveis de Proficiência"
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Uma seleção dos meus trabalhos mais recentes e impactantes",
+    "filters": {
+      "all": "Todos",
+      "web": "Web",
+      "mobile": "Mobile",
+      "fullstack": "Full Stack",
+      "game": "Jogos"
+    },
+    "viewSite": "Ver Site",
+    "viewCode": "Código",
+    "status": {
+      "live": "Online",
+      "development": "Em Desenvolvimento",
+      "testing": "Em Testes"
+    }
+  },
+  "experience": {
+    "title": "Experiência",
+    "subtitle": "Trajetória profissional e formação acadêmica",
+    "current": "Atual",
+    "education": "Formação",
+    "achievements": "Principais Conquistas",
+    "technologies": "Tecnologias"
+  },
+  "gitActivity": {
+    "title": "GitActivity",
+    "subtitle": "Atividade de desenvolvimento e contribuições no GitHub",
+    "stats": {
+      "totalCommits": "Total Commits",
+      "repositories": "Repositórios",
+      "contributions": "Contribuições 2024",
+      "activeDays": "Dias Ativos"
+    },
+    "recentCommits": "Commits Recentes",
+    "viewGithub": "Ver no GitHub"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Vamos trabalhar juntos! Entre em contacto para discutir oportunidades e projetos",
+    "info": "Informações de Contacto",
+    "social": "Conecte-se Comigo",
+    "availability": "Disponível para Projetos",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "send": "Enviar Mensagem",
+      "sending": "Enviando...",
+      "success": "Mensagem enviada com sucesso!",
+      "response": "Respondo normalmente em 24 horas"
+    }
+  },
+  "languages": {
+    "pt": "Português",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español"
+  }
+}

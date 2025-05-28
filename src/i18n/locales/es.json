@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Karim Santos",
+    "title": "Ingeniero de Software & CEO",
+    "description": "Especialista en desarrollo web y móvil con experiencia en liderazgo de equipos.",
+    "subtitle": "Creador de soluciones innovadoras para centros de contacto y gestión empresarial.",
+    "viewProjects": "Ver Proyectos",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Acerca",
+    "subtitle": "Conoce más sobre mi trayectoria y experiencia profesional",
+    "description": "Ingeniero de Software y Desarrollador Web/Móvil con sólida experiencia en programación, gestión de equipos y desarrollo de soluciones innovadoras para centros de contacto y gestión empresarial."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Tecnologías y herramientas que domino para crear soluciones completas",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Móvil",
+      "database": "Base de datos",
+      "tools": "Herramientas & DevOps"
+    },
+    "languages": "Idiomas",
+    "proficiencyLevels": "Niveles de Competencia"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Una selección de mis trabajos más recientes e impactantes",
+    "filters": {
+      "all": "Todos",
+      "web": "Web",
+      "mobile": "Móvil",
+      "fullstack": "Full Stack",
+      "game": "Juegos"
+    },
+    "viewSite": "Ver Sitio",
+    "viewCode": "Código",
+    "status": {
+      "live": "En vivo",
+      "development": "En Desarrollo",
+      "testing": "En Pruebas"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "subtitle": "Trayectoria profesional y formación académica",
+    "current": "Actual",
+    "education": "Formación",
+    "achievements": "Principales Logros",
+    "technologies": "Tecnologías"
+  },
+  "gitActivity": {
+    "title": "GitActivity",
+    "subtitle": "Actividad de desarrollo y contribuciones en GitHub",
+    "stats": {
+      "totalCommits": "Total Commits",
+      "repositories": "Repositorios",
+      "contributions": "Contribuciones 2024",
+      "activeDays": "Días Activos"
+    },
+    "recentCommits": "Commits Recientes",
+    "viewGithub": "Ver en GitHub"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¡Trabajemos juntos! Ponte en contacto para discutir oportunidades y proyectos",
+    "info": "Información de Contacto",
+    "social": "Conéctate Conmigo",
+    "availability": "Disponible para Proyectos",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado con éxito!",
+      "response": "Normalmente respondo en 24 horas"
+    }
+  },
+  "languages": {
+    "pt": "Português",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español"
+  }
+}

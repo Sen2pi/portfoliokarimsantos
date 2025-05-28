@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Karim Santos",
+    "title": "Software Engineer & CEO",
+    "description": "Specialist in web and mobile development with team leadership experience.",
+    "subtitle": "Creator of innovative solutions for contact centers and business management.",
+    "viewProjects": "View Projects",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Learn more about my journey and professional experience",
+    "description": "Software Engineer and Web/Mobile Developer with solid experience in programming, team management and development of innovative solutions for contact centers and business management."
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies and tools I master to create complete solutions",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "database": "Database",
+      "tools": "Tools & DevOps"
+    },
+    "languages": "Languages",
+    "proficiencyLevels": "Proficiency Levels"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A selection of my most recent and impactful work",
+    "filters": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile",
+      "fullstack": "Full Stack",
+      "game": "Games"
+    },
+    "viewSite": "View Site",
+    "viewCode": "Code",
+    "status": {
+      "live": "Live",
+      "development": "In Development",
+      "testing": "Testing"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "Professional trajectory and academic background",
+    "current": "Current",
+    "education": "Education",
+    "achievements": "Key Achievements",
+    "technologies": "Technologies"
+  },
+  "gitActivity": {
+    "title": "GitActivity",
+    "subtitle": "Development activity and GitHub contributions",
+    "stats": {
+      "totalCommits": "Total Commits",
+      "repositories": "Repositories",
+      "contributions": "2024 Contributions",
+      "activeDays": "Active Days"
+    },
+    "recentCommits": "Recent Commits",
+    "viewGithub": "View on GitHub"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's work together! Get in touch to discuss opportunities and projects",
+    "info": "Contact Information",
+    "social": "Connect with Me",
+    "availability": "Available for Projects",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "response": "I usually respond within 24 hours"
+    }
+  },
+  "languages": {
+    "pt": "Português",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español"
+  }
+}

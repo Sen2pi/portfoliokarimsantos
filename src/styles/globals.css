@@ -30,3 +30,32 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+/* Esconder o widget padrão do Google Translate */
+.goog-te-banner-frame,
+.goog-te-menu-frame {
+  display: none !important;
+}
+
+.goog-te-combo {
+  display: none !important;
+}
+
+#google_translate_element {
+  display: none !important;
+}
+
+/* Remover a barra superior do Google Translate */
+body {
+  top: 0 !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* Estilizar o dropdown quando visível para debug */
+.goog-te-combo {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}

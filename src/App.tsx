@@ -7,6 +7,7 @@
   import GitActivity from './components/GitActivity';
   import Contact from './components/Contact';
   import './styles/globals.css';
+  import './i18n'; // Importar configuração i18n
 
   function App() {
     return (

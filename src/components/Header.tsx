@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Github, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
-
+import LanguageSelector from './LanguageSelector';
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -71,7 +71,31 @@ const Header: React.FC = () => {
               <Mail size={20} />
             </motion.a>
           </div>
+ {/* Right Side: Language Selector + Social Links */}
+          <div className="hidden md:flex items-center space-x-4">
+            {/* Language Selector */}
+            <LanguageSelector />
 
+            {/* Social Links */}
+            <div className="flex items-center space-x-3 border-l border-gray-700 pl-4">
+              <motion.a
+                href="https://github.com/Sen2pi"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Github className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                href="mailto:dr.karim.patatas@gmail.com"
+                whileHover={{ scale: 1.1, rotate: -5 }}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Mail className="w-5 h-5" />
+              </motion.a>
+            </div>
+          </div>
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}

@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Karim Santos",
+    "title": "Ingénieur Logiciel & PDG",
+    "description": "Spécialiste en développement web et mobile avec expérience en leadership d'équipe.",
+    "subtitle": "Créateur de solutions innovantes pour centres d'appels et gestion d'entreprise.",
+    "viewProjects": "Voir Projets",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "À propos",
+    "subtitle": "Découvrez mon parcours et mon expérience professionnelle",
+    "description": "Ingénieur Logiciel et Développeur Web/Mobile avec une solide expérience en programmation, gestion d'équipes et développement de solutions innovantes pour centres d'appels et gestion d'entreprise."
+  },
+  "skills": {
+    "title": "Compétences",
+    "subtitle": "Technologies et outils que je maîtrise pour créer des solutions complètes",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "database": "Base de données",
+      "tools": "Outils & DevOps"
+    },
+    "languages": "Langues",
+    "proficiencyLevels": "Niveaux de Compétence"
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Une sélection de mes travaux les plus récents et impactants",
+    "filters": {
+      "all": "Tous",
+      "web": "Web",
+      "mobile": "Mobile",
+      "fullstack": "Full Stack",
+      "game": "Jeux"
+    },
+    "viewSite": "Voir Site",
+    "viewCode": "Code",
+    "status": {
+      "live": "En ligne",
+      "development": "En Développement",
+      "testing": "En Test"
+    }
+  },
+  "experience": {
+    "title": "Expérience",
+    "subtitle": "Parcours professionnel et formation académique",
+    "current": "Actuel",
+    "education": "Formation",
+    "achievements": "Principales Réalisations",
+    "technologies": "Technologies"
+  },
+  "gitActivity": {
+    "title": "GitActivity",
+    "subtitle": "Activité de développement et contributions GitHub",
+    "stats": {
+      "totalCommits": "Total Commits",
+      "repositories": "Dépôts",
+      "contributions": "Contributions 2024",
+      "activeDays": "Jours Actifs"
+    },
+    "recentCommits": "Commits Récents",
+    "viewGithub": "Voir sur GitHub"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Travaillons ensemble ! Contactez-moi pour discuter d'opportunités et de projets",
+    "info": "Informations de Contact",
+    "social": "Connectez-vous avec Moi",
+    "availability": "Disponible pour Projets",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer Message",
+      "sending": "Envoi...",
+      "success": "Message envoyé avec succès!",
+      "response": "Je réponds généralement dans les 24 heures"
+    }
+  },
+  "languages": {
+    "pt": "Português",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español"
+  }
+}
