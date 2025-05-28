@@ -70,7 +70,6 @@ const GitActivity: React.FC = () => {
         if (currentDate.getFullYear() === 2024) {
           const dayOfWeek = currentDate.getDay();
           const month = currentDate.getMonth();
-          const dayOfMonth = currentDate.getDate();
           
           // Padrões realistas de contribuições
           // Menos contribuições aos fins de semana
@@ -203,7 +202,7 @@ const GitActivity: React.FC = () => {
           <div className="bg-gray-800 p-6 rounded-lg overflow-x-auto">
             {/* Labels dos meses no topo */}
             <div className="flex justify-start text-xs text-gray-400 mb-2 ml-8">
-              {monthLabels.map((month, index) => (
+              {monthLabels.map((month) => (
                 <span key={month} className="w-12 text-left" style={{ marginRight: '32px' }}>
                   {month}
                 </span>
