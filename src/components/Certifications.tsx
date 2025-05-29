@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, FileText, Award } from 'lucide-react';
+import { ExternalLink, Award } from 'lucide-react';
 
 const Certifications: React.FC = () => {
   useEffect(() => {
