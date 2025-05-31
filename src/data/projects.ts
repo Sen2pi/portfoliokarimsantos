@@ -107,4 +107,14 @@ export const projects: Project[] = [
     category: 'web',
     status: 'live'
   },
+      {
+    id: '12',
+    title: 'KPCloud',
+    description: ' Plataforma de cloud computing para gestão de recursos e serviços locais e remotos. (Gestão de servidores, Ficheiros , backups, etc.)',
+    technologies: ['React',  'JavaScript', 'CSS'],
+    liveUrl: 'https://github.com/Sen2pi/KPCloud',
+    image: '/kpcloud.png',
+    category: 'fullstack',
+    status: 'live'
+  },
 ];

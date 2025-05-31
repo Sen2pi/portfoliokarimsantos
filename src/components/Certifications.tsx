@@ -182,7 +182,7 @@ const Certifications: React.FC = () => {
       id: "0b8ce9363e4582741da051c37cbf6813",
       title: "IBM Full Stack Software Developer",
       issuer: "IBM via Coursera",
-      date: "May, 2022",
+      date: "May, 2025",
       url: "https://coursera.org/share/0eb192f3520ec38f01fb77373df19e9f",
       verifyUrl:
         "https://www.coursera.org/account/accomplishments/professional-cert/A9TNGESEICG3",
@@ -227,11 +227,11 @@ const Certifications: React.FC = () => {
     <div className="certifications-coursera-container">
       <div className="certifications-coursera-badge">
         <div className="certifications-coursera-logo">
-          <span className="text-blue-500 font-bold text-lg">coursera</span>
+          <span className="text-blue-500 font-bold text-lg">{credential.type}</span>
         </div>
         <div className="certifications-coursera-type">
           <span className="text-xs text-gray-400">
-            SPECIALIZATION CERTIFICATE
+            PROFESSIONAL CERTIFICATE
           </span>
         </div>
       </div>
@@ -282,14 +282,15 @@ const Certifications: React.FC = () => {
                   : ""
               }`}
             >
+              
               {/* Badge/Certificate Display */}
               {credential.type === "credly"
                 ? renderCredlyBadge(credential)
                 : renderCourseraCertificate(credential)}
 
               {/* Badge Info */}
-              <h3 className="certifications-title">{credential.title}</h3>
 
+              <h3 className="certifications-title">{credential.title}</h3>
               <div className="certifications-info">
                 <div className="certifications-issuer">{credential.issuer}</div>
                 <div className="certifications-date">
