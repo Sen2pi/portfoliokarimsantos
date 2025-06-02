@@ -122,7 +122,7 @@ export const projects: Project[] = [
     title: 'Bloquinho',
     description: ' Plataforma de cloud computing para gestão de recursos e serviços locais e remotos. (Gestão de servidores, Ficheiros , backups, etc.)',
     technologies: ['React', 'Docker' ,  'JavaScript', 'CSS', 'TailWind', 'Next', 'PostGre', 'Prisma'],
-    liveUrl: 'https://github.com/Sen2pi/Bloquinho',
+    liveUrl: 'https://bloquinho.vercel.app/',
     image: '/bloquinho.png',
     category: 'fullstack',
     status: 'live'
