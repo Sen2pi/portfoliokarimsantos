@@ -207,7 +207,31 @@ const Certifications: React.FC = () => {
         "Software Developer Career Guide and Interview Preparation",
       ],
     },
-    
+    {
+      id: "c13e2ac673e5e72f888b57d41d67eb18",
+      title: "Microsoft Full-Stack Developer",
+      issuer: "Microsoft via Coursera",
+      date: "June, 2025",
+      url: "https://coursera.org/share/c13e2ac673e5e72f888b57d41d67eb18",
+      verifyUrl: "https://coursera.org/share/c13e2ac673e5e72f888b57d41d67eb18",
+      type: "coursera",
+      description:
+        "Professional Certificate de 12 cursos em Full-Stack Development com .NET Core e Microsoft Azure (6 meses, 10h/semana)",
+      courses: [
+        "Foundations of Coding Full-Stack",
+        "Introduction to Programming With C#",
+        "Introduction to Web Development",
+        "Blazor for Front-End Development",
+        "Back-End Development with .NET",
+        "Database Integration and Management",
+        "Full-Stack Integration",
+        "Security and Authentication",
+        "Performance Optimization and Scalability",
+        "Data Structures and Algorithms",
+        "Deployment and DevOps",
+        "Full-Stack Developer Capstone Project",
+      ],
+    },
   ];
 
   const allCredentials = [...credlyBadges, ...courseraCredentials];
@@ -227,7 +251,9 @@ const Certifications: React.FC = () => {
     <div className="certifications-coursera-container">
       <div className="certifications-coursera-badge">
         <div className="certifications-coursera-logo">
-          <span className="text-blue-500 font-bold text-lg">{credential.type}</span>
+          <span className="text-blue-500 font-bold text-lg">
+            {credential.type}
+          </span>
         </div>
         <div className="certifications-coursera-type">
           <span className="text-xs text-gray-400">
@@ -282,7 +308,6 @@ const Certifications: React.FC = () => {
                   : ""
               }`}
             >
-              
               {/* Badge/Certificate Display */}
               {credential.type === "credly"
                 ? renderCredlyBadge(credential)
