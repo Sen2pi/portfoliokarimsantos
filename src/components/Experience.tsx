@@ -1,114 +1,175 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, Calendar, MapPin, Users, Code, Award } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { experience } from '../data/experience';
 
 const Experience: React.FC = () => {
-  const experiences = [
-    {
-      id: '1',
-      title: 'CEO & Lead Developer',
-      company: 'KPS - Karim Patatas Soluções',
-      period: '2016 - Presente',
-      location: 'Portugal',
-      current: true,
-      type: 'Liderança & Desenvolvimento',
-      description: [
-        'Liderança de equipas multidisciplinares e gestão operacional de contact center com até 50 colaboradores',
-        'Desenvolvimento de plataforma própria integrando gestão de empresas de reboques e contact center',
-        'Otimização de fluxos de trabalho e redução de custos operacionais',
-        'Implementação de soluções web e mobile em Django e React Native',
-        'Integração de sistemas de telefonia e automação de processos',
-        'Gestão de infraestrutura Linux e redes, garantindo alta disponibilidade e segurança'
-      ],
-      technologies: ['React', 'Django', 'React Native', 'Linux', 'MySQL', 'Python', 'API', 'NGINX'],
-      achievements: [
-        'Gestão de equipa de 50+ colaboradores',
-        'Redução de 40% nos custos operacionais',
-        'Implementação de sistema integrado completo'
-      ]
-    },
-    {
-      id: '2',
-      title: 'Engenheiro de Suporte Aplicacional',
-      company: 'Natixis',
-      period: '2022',
-      location: 'Portugal',
-      type: 'Suporte Técnico',
-      description: [
-        'Suporte a aplicações bancárias críticas',
-        'Monitorização de processos automatizados (Java/Shell Script)',
-        'Troubleshooting e documentação de sistemas',
-        'Colaboração com equipas internacionais',
-        'Gestão de tickets e melhoria contínua de processos'
-      ],
-      technologies: ['Java', 'Shell Script', 'Linux', 'Git', 'Jira', 'Docker', 'XLDeploy'],
-      achievements: [
-        'Suporte 24/7 a sistemas bancários críticos',
-        'Melhoria de processos de monitorização',
-        'Colaboração internacional eficaz'
-      ]
-    },
-    {
-      id: '3',
-      title: 'Coordenador Operacional',
-      company: 'Randstad',
-      period: '2014 - 2016',
-      location: 'Portugal',
-      type: 'Gestão Operacional',
-      description: [
-        'Coordenação de equipas e controlo de KPIs financeiros',
-        'Gestão de produtividade e otimização de processos',
-        'Análise de métricas e relatórios de performance'
-      ],
-      technologies: ['Gestão', 'KPIs', 'Produtividade', 'Análise de Dados'],
-      achievements: [
-        'Melhoria de 25% na produtividade da equipa',
-        'Implementação de novos KPIs',
-        'Otimização de processos operacionais'
-      ]
-    },
-    {
-      id: '4',
-      title: 'Operador de CallCenter',
-      company: 'AcordoTango',
-      period: '2012 - 2014',
-      location: 'Portugal',
-      type: 'Operações',
-      description: [
-        'Gestão de chamadas e organização logística de frotas de camiões de reboques',
-        'Utilização de mapas e cartografia para otimização de rotas',
-        'Trabalho com sistemas baseados na localização',
-        'Suporte iOS e MacOS e produtos Apple T1/T2'
-      ],
-      technologies: ['Sistemas de Localização', 'Cartografia', 'iOS', 'MacOS', 'Apple Support'],
-      achievements: [
-        'Otimização de rotas de reboques',
-        'Melhoria na eficiência logística',
-        'Suporte técnico especializado Apple'
-      ]
+  const { t, currentLanguage } = useLanguage();
+
+  const getTranslatedTitle = (exp: any) => {
+    return exp.title[currentLanguage] || exp.title.pt;
+  };
+
+  const getTranslatedDescription = (exp: any) => {
+    return exp.description[currentLanguage] || exp.description.pt;
+  };
+
+  const getTranslatedPeriod = (exp: any) => {
+    if (typeof exp.period === 'string') {
+      return exp.period;
     }
-  ];
+    return exp.period[currentLanguage] || exp.period.pt;
+  };
 
   const education = [
     {
-      degree: 'Licenciatura em Informática',
+      degree: {
+        pt: 'Licenciatura em Informática',
+        en: 'Bachelor in Computer Science',
+        fr: 'Licence en Informatique',
+        es: 'Licenciatura en Informática',
+        de: 'Bachelor in Informatik',
+        it: 'Laurea in Informatica'
+      },
       institution: 'Universidade da Maia',
       year: '2025',
-      status: 'Em curso'
+      status: t('experience.inProgress')
     },
     {
-      degree: 'Oracle Certified Professional',
+      degree: {
+        pt: 'Oracle Certified Professional',
+        en: 'Oracle Certified Professional',
+        fr: 'Oracle Certified Professional',
+        es: 'Oracle Certified Professional',
+        de: 'Oracle Certified Professional',
+        it: 'Oracle Certified Professional'
+      },
       institution: 'Rumos',
       year: '2024',
-      status: 'Concluído'
+      status: t('experience.completed')
     },
     {
-      degree: 'Psicologia',
+      degree: {
+        pt: 'Psicologia',
+        en: 'Psychology',
+        fr: 'Psychologie',
+        es: 'Psicología',
+        de: 'Psychologie',
+        it: 'Psicologia'
+      },
       institution: 'Universidade Católica Portuguesa',
       year: '2013',
-      status: 'Concluído'
+      status: t('experience.completed')
     }
   ];
+
+  const getEducationDegree = (edu: any) => {
+    return edu.degree[currentLanguage] || edu.degree.pt;
+  };
+
+  const getAchievementsTranslation = (achievement: string) => {
+    const translations: any = {
+      'Gestão de equipa de 50+ colaboradores': {
+        pt: 'Gestão de equipa de 50+ colaboradores',
+        en: 'Management of 50+ team members',
+        fr: 'Gestion d\'équipe de 50+ collaborateurs',
+        es: 'Gestión de equipo de 50+ colaboradores',
+        de: 'Management von 50+ Teammitgliedern',
+        it: 'Gestione di team di 50+ collaboratori'
+      },
+      'Redução de 40% nos custos operacionais': {
+        pt: 'Redução de 40% nos custos operacionais',
+        en: '40% reduction in operational costs',
+        fr: 'Réduction de 40% des coûts opérationnels',
+        es: 'Reducción del 40% en costos operativos',
+        de: '40% Reduzierung der Betriebskosten',
+        it: 'Riduzione del 40% dei costi operativi'
+      },
+      'Implementação de sistema integrado completo': {
+        pt: 'Implementação de sistema integrado completo',
+        en: 'Complete integrated system implementation',
+        fr: 'Implémentation complète d\'un système intégré',
+        es: 'Implementación completa de sistema integrado',
+        de: 'Vollständige Implementierung eines integrierten Systems',
+        it: 'Implementazione completa di sistema integrato'
+      },
+      'Suporte 24/7 a sistemas bancários críticos': {
+        pt: 'Suporte 24/7 a sistemas bancários críticos',
+        en: '24/7 support to critical banking systems',
+        fr: 'Support 24/7 aux systèmes bancaires critiques',
+        es: 'Soporte 24/7 a sistemas bancarios críticos',
+        de: '24/7 Support für kritische Banksysteme',
+        it: 'Supporto 24/7 a sistemi bancari critici'
+      },
+      'Melhoria de processos de monitorização': {
+        pt: 'Melhoria de processos de monitorização',
+        en: 'Improvement of monitoring processes',
+        fr: 'Amélioration des processus de surveillance',
+        es: 'Mejora de procesos de monitorización',
+        de: 'Verbesserung der Überwachungsprozesse',
+        it: 'Miglioramento dei processi di monitoraggio'
+      },
+      'Colaboração internacional eficaz': {
+        pt: 'Colaboração internacional eficaz',
+        en: 'Effective international collaboration',
+        fr: 'Collaboration internationale efficace',
+        es: 'Colaboración internacional efectiva',
+        de: 'Effektive internationale Zusammenarbeit',
+        it: 'Collaborazione internazionale efficace'
+      },
+      'Melhoria de 25% na produtividade da equipa': {
+        pt: 'Melhoria de 25% na produtividade da equipa',
+        en: '25% improvement in team productivity',
+        fr: 'Amélioration de 25% de la productivité de l\'équipe',
+        es: 'Mejora del 25% en la productividad del equipo',
+        de: '25% Verbesserung der Teamproduktivität',
+        it: 'Miglioramento del 25% nella produttività del team'
+      },
+      'Implementação de novos KPIs': {
+        pt: 'Implementação de novos KPIs',
+        en: 'Implementation of new KPIs',
+        fr: 'Implémentation de nouveaux KPI',
+        es: 'Implementación de nuevos KPIs',
+        de: 'Implementierung neuer KPIs',
+        it: 'Implementazione di nuovi KPI'
+      },
+      'Otimização de processos operacionais': {
+        pt: 'Otimização de processos operacionais',
+        en: 'Optimization of operational processes',
+        fr: 'Optimisation des processus opérationnels',
+        es: 'Optimización de procesos operativos',
+        de: 'Optimierung der Betriebsprozesse',
+        it: 'Ottimizzazione dei processi operativi'
+      },
+      'Otimização de rotas de reboques': {
+        pt: 'Otimização de rotas de reboques',
+        en: 'Optimization of towing routes',
+        fr: 'Optimisation des itinéraires de remorquage',
+        es: 'Optimización de rutas de remolque',
+        de: 'Optimierung der Abschleppwege',
+        it: 'Ottimizzazione delle rotte di rimorchio'
+      },
+      'Melhoria na eficiência logística': {
+        pt: 'Melhoria na eficiência logística',
+        en: 'Improvement in logistics efficiency',
+        fr: 'Amélioration de l\'efficacité logistique',
+        es: 'Mejora en la eficiencia logística',
+        de: 'Verbesserung der logistischen Effizienz',
+        it: 'Miglioramento dell\'efficienza logistica'
+      },
+      'Suporte técnico especializado Apple': {
+        pt: 'Suporte técnico especializado Apple',
+        en: 'Specialized Apple technical support',
+        fr: 'Support technique spécialisé Apple',
+        es: 'Soporte técnico especializado Apple',
+        de: 'Spezialisierter Apple-Support',
+        it: 'Supporto tecnico specializzato Apple'
+      }
+    };
+    
+    return translations[achievement]?.[currentLanguage] || achievement;
+  };
 
   return (
     <section id="experience" className="py-20 bg-gray-900">
@@ -120,10 +181,10 @@ const Experience: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-4 font-mono">
-            &lt;Experiência/&gt;
+            &lt;{t('experience.title')}/&gt;
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Trajetória profissional e formação acadêmica
+            {t('experience.subtitle')}
           </p>
         </motion.div>
 
@@ -132,11 +193,11 @@ const Experience: React.FC = () => {
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold text-white mb-8 font-mono flex items-center">
               <Briefcase className="mr-3 text-blue-400" size={24} />
-              Experiência Profissional
+              {t('experience.professional')}
             </h3>
             
             <div className="space-y-8">
-              {experiences.map((exp, index) => (
+              {experience.map((exp, index) => (
                 <motion.div
                   key={exp.id}
                   initial={{ opacity: 0, x: -50 }}
@@ -146,7 +207,7 @@ const Experience: React.FC = () => {
                   className="relative"
                 >
                   {/* Timeline Line */}
-                  {index !== experiences.length - 1 && (
+                  {index !== experience.length - 1 && (
                     <div className="absolute left-6 top-16 w-0.5 h-full bg-gradient-to-b from-blue-500 to-transparent"></div>
                   )}
                   
@@ -163,7 +224,7 @@ const Experience: React.FC = () => {
                       <div className="flex flex-wrap items-start justify-between mb-4">
                         <div>
                           <h4 className="text-xl font-bold text-white font-mono">
-                            {exp.title}
+                            {getTranslatedTitle(exp)}
                           </h4>
                           <p className="text-blue-400 font-semibold">
                             {exp.company}
@@ -171,30 +232,24 @@ const Experience: React.FC = () => {
                           <div className="flex items-center space-x-4 text-gray-400 text-sm mt-1">
                             <span className="flex items-center">
                               <Calendar size={14} className="mr-1" />
-                              {exp.period}
+                              {getTranslatedPeriod(exp)}
                             </span>
                             <span className="flex items-center">
                               <MapPin size={14} className="mr-1" />
-                              {exp.location}
+                              Portugal
                             </span>
                           </div>
                         </div>
                         
                         {exp.current && (
                           <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-mono">
-                            Atual
+                            {t('experience.current')}
                           </span>
                         )}
                       </div>
 
-                      <div className="mb-4">
-                        <span className="inline-block bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-xs font-mono">
-                          {exp.type}
-                        </span>
-                      </div>
-
                       <ul className="space-y-2 mb-4">
-                        {exp.description.map((desc, i) => (
+                        {getTranslatedDescription(exp).map((desc: string, i: number) => (
                           <li key={i} className="text-gray-300 text-sm flex items-start">
                             <span className="text-blue-400 mr-2 mt-1">▸</span>
                             {desc}
@@ -206,10 +261,10 @@ const Experience: React.FC = () => {
                       <div className="mb-4">
                         <h5 className="text-white font-mono text-sm mb-2 flex items-center">
                           <Code size={14} className="mr-2" />
-                          Tecnologias:
+                          {t('experience.technologies')}
                         </h5>
                         <div className="flex flex-wrap gap-2">
-                          {exp.technologies.map((tech) => (
+                          {exp.technologies.map((tech: string) => (
                             <span
                               key={tech}
                               className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs font-mono"
@@ -220,21 +275,23 @@ const Experience: React.FC = () => {
                         </div>
                       </div>
 
-                      {/* Conquistas */}
-                      <div>
-                        <h5 className="text-white font-mono text-sm mb-2 flex items-center">
-                          <Award size={14} className="mr-2" />
-                          Principais Conquistas:
-                        </h5>
-                        <ul className="space-y-1">
-                          {exp.achievements.map((achievement, i) => (
-                            <li key={i} className="text-green-400 text-xs flex items-start">
-                              <span className="mr-2 mt-1">✓</span>
-                              {achievement}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                      {/* Conquistas - Só renderiza se achievements existir */}
+                      {exp.achievements && exp.achievements.length > 0 && (
+                        <div>
+                          <h5 className="text-white font-mono text-sm mb-2 flex items-center">
+                            <Award size={14} className="mr-2" />
+                            {t('experience.achievements')}
+                          </h5>
+                          <ul className="space-y-1">
+                            {exp.achievements.map((achievement: string, i: number) => (
+                              <li key={i} className="text-green-400 text-xs flex items-start">
+                                <span className="mr-2 mt-1">✓</span>
+                                {getAchievementsTranslation(achievement)}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </motion.div>
@@ -246,13 +303,13 @@ const Experience: React.FC = () => {
           <div>
             <h3 className="text-2xl font-bold text-white mb-8 font-mono flex items-center">
               <Award className="mr-3 text-purple-400" size={24} />
-              Formação
+              {t('experience.education')}
             </h3>
             
             <div className="space-y-6">
               {education.map((edu, index) => (
                 <motion.div
-                  key={edu.degree}
+                  key={getEducationDegree(edu)}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -260,7 +317,7 @@ const Experience: React.FC = () => {
                   className="glass-effect rounded-lg p-4"
                 >
                   <h4 className="text-white font-semibold font-mono mb-2">
-                    {edu.degree}
+                    {getEducationDegree(edu)}
                   </h4>
                   <p className="text-blue-400 text-sm mb-1">
                     {edu.institution}
@@ -270,7 +327,7 @@ const Experience: React.FC = () => {
                       {edu.year}
                     </span>
                     <span className={`px-2 py-1 rounded-full text-xs font-mono ${
-                      edu.status === 'Em curso' 
+                      edu.status === t('experience.inProgress')
                         ? 'bg-yellow-500 text-black' 
                         : 'bg-green-500 text-white'
                     }`}>
@@ -290,24 +347,24 @@ const Experience: React.FC = () => {
             >
               <h4 className="text-white font-mono mb-4 flex items-center">
                 <Users className="mr-2 text-green-400" size={16} />
-                Resumo da Carreira
+                {t('experience.careerSummary')}
               </h4>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-gray-400 text-sm">Experiência Total:</span>
-                  <span className="text-white font-mono text-sm">10+ anos</span>
+                  <span className="text-gray-400 text-sm">{t('experience.totalExperience')}</span>
+                  <span className="text-white font-mono text-sm">{t('experience.years')}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-400 text-sm">Equipa Gerida:</span>
-                  <span className="text-white font-mono text-sm">50+ pessoas</span>
+                  <span className="text-gray-400 text-sm">{t('experience.teamManaged')}</span>
+                  <span className="text-white font-mono text-sm">{t('experience.people')}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-400 text-sm">Projetos Liderados:</span>
-                  <span className="text-white font-mono text-sm">15+</span>
+                  <span className="text-gray-400 text-sm">{t('experience.projectsLed')}</span>
+                  <span className="text-white font-mono text-sm">{t('experience.projects')}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-400 text-sm">Certificações:</span>
-                  <span className="text-white font-mono text-sm">Oracle OCP</span>
+                  <span className="text-gray-400 text-sm">{t('experience.certifications')}</span>
+                  <span className="text-white font-mono text-sm">{t('experience.oracle')}</span>
                 </div>
               </div>
             </motion.div>

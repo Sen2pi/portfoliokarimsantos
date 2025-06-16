@@ -1,6 +1,7 @@
 import React, { type JSX } from "react";
 import { motion } from "framer-motion";
 import { skills } from "../data/skills";
+import { useLanguage } from '../contexts/LanguageContext';
 import {
   SiReact,
   SiJavascript,
@@ -19,17 +20,19 @@ import {
   SiDocker,
   SiAndroid,
   SiNginx,
-  SiSharp,    // ✅ NOVO: Ícone do C#
-  SiUnity,     // ✅ NOVO: Ícone do Unity
+  SiSharp,
+  SiUnity,
 } from "react-icons/si";
 
 const Skills: React.FC = () => {
+  const { t } = useLanguage();
+
   const categories = {
-    frontend: "Frontend",
-    backend: "Backend",
-    mobile: "Mobile",
-    database: "Database",
-    tools: "Tools & DevOps",
+    frontend: t('skills.frontend'),
+    backend: t('skills.backend'),
+    mobile: t('skills.mobile'),
+    database: t('skills.database'),
+    tools: t('skills.tools'),
   };
 
   const getSkillIcon = (iconName: string) => {
@@ -39,7 +42,7 @@ const Skills: React.FC = () => {
       typescript: <SiTypescript className="text-blue-500" />,
       python: <SiPython className="text-green-400" />,
       java: <SiCoffeescript className="text-red-500" />,
-      csharp: <SiSharp className="text-purple-600" />,     // ✅ NOVO
+      csharp: <SiSharp className="text-purple-600" />,
       kotlin: <SiKotlin className="text-purple-500" />,
       html5: <SiHtml5 className="text-orange-500" />,
       css3: <SiCss3 className="text-blue-500" />,
@@ -52,62 +55,63 @@ const Skills: React.FC = () => {
       docker: <SiDocker className="text-blue-400" />,
       android: <SiAndroid className="text-green-500" />,
       nginx: <SiNginx className="text-green-600" />,
-      unity: <SiUnity className="text-gray-300" />          // ✅ NOVO
+      unity: <SiUnity className="text-gray-300" />
     };
     return iconMap[iconName] || <span className="text-2xl">💻</span>;
   };
 
-const languages = [
+  const languages = [
     { 
-      lang: "Português", 
-      level: "Nativo", 
+      lang: t('lang.portuguese'), 
+      level: t('lang.native'), 
       flag: "🇵🇹",
       flagImage: "https://flagcdn.com/w40/pt.png",
-      country: "Portugal"
+      country: t('lang.portugal')
     },
     { 
-      lang: "Francês", 
-      level: "Nativo", 
+      lang: t('lang.french'), 
+      level: t('lang.native'), 
       flag: "🇫🇷",
       flagImage: "https://flagcdn.com/w40/fr.png",
-      country: "França"
+      country: t('lang.france')
     },
     { 
-      lang: "Inglês", 
+      lang: t('lang.english'), 
       level: "C2", 
       flag: "🇬🇧",
       flagImage: "https://flagcdn.com/w40/gb.png",
-      country: "Reino Unido"
+      country: t('lang.uk')
     },
     { 
-      lang: "Espanhol", 
+      lang: t('lang.spanish'), 
       level: "B2", 
       flag: "🇪🇸",
       flagImage: "https://flagcdn.com/w40/es.png",
-      country: "Espanha"
+      country: t('lang.spain')
     },
     { 
-      lang: "Chinês", 
+      lang: t('lang.chinese'), 
       level: "A1", 
       flag: "🇨🇳",
       flagImage: "https://flagcdn.com/w40/cn.png",
-      country: "China"
+      country: t('lang.china')
     },
     { 
-      lang: "Japonês", 
+      lang: t('lang.japanese'), 
       level: "A1", 
       flag: "🇯🇵",
       flagImage: "https://flagcdn.com/w40/jp.png",
-      country: "Japão"
+      country: t('lang.japan')
     },
     { 
-      lang: "Tailandês", 
+      lang: t('lang.thai'), 
       level: "A1", 
       flag: "🇹🇭",
       flagImage: "https://flagcdn.com/w40/th.png",
-      country: "Tailândia"
+      country: t('lang.thailand')
     },
   ];
+
   return (
     <section id="skills" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
@@ -118,10 +122,10 @@ const languages = [
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-4 font-mono">
-            &lt;Skills/&gt;
+            &lt;{t('skills.title')}/&gt;
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Tecnologias e ferramentas que domino para criar soluções completas
+            {t('skills.subtitle')}
           </p>
         </motion.div>
 
@@ -187,7 +191,7 @@ const languages = [
           viewport={{ once: true }}
           className="mt-16 glass-effect rounded-lg p-6"
         >
-          <h3 className="text-2xl font-bold text-white mb-6">Idiomas</h3>
+          <h3 className="text-2xl font-bold text-white mb-6">{t('skills.languages')}</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
             {languages.map((language) => (
               <div
@@ -195,13 +199,11 @@ const languages = [
                 className="bg-gray-800 p-4 rounded-lg text-center hover:bg-gray-700 transition-colors group"
               >
                 <div className="mb-3 flex justify-center">
-                  {/* Bandeira como imagem com fallback para emoji */}
                   <img
                     src={language.flagImage}
                     alt={`Bandeira ${language.country}`}
                     className="w-8 h-6 object-cover rounded shadow-lg group-hover:scale-110 transition-transform"
                     onError={(e) => {
-                      // Fallback para emoji se a imagem não carregar
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
                       const parent = target.parentElement;
@@ -222,19 +224,19 @@ const languages = [
           
           {/* Legenda dos níveis */}
           <div className="mt-6 bg-gray-800 p-4 rounded-lg">
-            <h4 className="text-white font-semibold mb-3 text-center">Níveis de Proficiência</h4>
+            <h4 className="text-white font-semibold mb-3 text-center">{t('skills.proficiencyLevels')}</h4>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <span className="text-green-400">
-                <strong>Nativo:</strong> Língua materna
+                <strong>Nativo:</strong> {t('skills.native')}
               </span>
               <span className="text-blue-400">
-                <strong>C2:</strong> Proficiência plena
+                <strong>C2:</strong> {t('skills.c2')}
               </span>
               <span className="text-yellow-400">
-                <strong>B2:</strong> Utilizador independente
+                <strong>B2:</strong> {t('skills.b2')}
               </span>
               <span className="text-orange-400">
-                <strong>A1:</strong> Utilizador elementar
+                <strong>A1:</strong> {t('skills.a1')}
               </span>
             </div>
           </div>

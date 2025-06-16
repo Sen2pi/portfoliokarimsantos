@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Globe } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface Language {
   code: string;
@@ -20,17 +21,13 @@ const languages: Language[] = [
 
 const LanguageSelector: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState('pt');
+  const { currentLanguage, setLanguage } = useLanguage();
 
   const currentLang = languages.find(lang => lang.code === currentLanguage) || languages[0];
 
   const handleLanguageChange = (languageCode: string) => {
-    setCurrentLanguage(languageCode);
+    setLanguage(languageCode);
     setIsOpen(false);
-    
-    // Aqui podes adicionar lógica personalizada para mudança de idioma
-    // Por exemplo, usar i18next ou outro sistema de tradução
-    console.log(`Idioma alterado para: ${languageCode}`);
   };
 
   return (
@@ -43,7 +40,6 @@ const LanguageSelector: React.FC = () => {
       >
         <Globe className="w-4 h-4 text-gray-300" />
         
-        {/* Bandeira atual */}
         <div className="flex items-center">
           <img
             src={currentLang.flagImage}
@@ -75,13 +71,11 @@ const LanguageSelector: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Backdrop */}
             <div 
               className="fixed inset-0 z-10"
               onClick={() => setIsOpen(false)}
             />
             
-            {/* Dropdown */}
             <motion.div
               initial={{ opacity: 0, y: -10, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -100,7 +94,6 @@ const LanguageSelector: React.FC = () => {
                       : 'text-gray-300 hover:text-white'
                   }`}
                 >
-                  {/* Bandeira */}
                   <div className="flex items-center justify-center w-8">
                     <img
                       src={language.flagImage}

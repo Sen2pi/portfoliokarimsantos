@@ -1,31 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { User, MapPin, Calendar, Award, Globe, Code2 } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const About: React.FC = () => {
+  const { t } = useLanguage();
+
   const personalInfo = [
-    { icon: <User className="text-blue-400" size={20} />, label: 'Nome', value: 'Karim Hussen Patatas Hassam dos Santos' },
-    { icon: <MapPin className="text-green-400" size={20} />, label: 'Localização', value: 'Golães, Fafe, Portugal' },
-    { icon: <Calendar className="text-purple-400" size={20} />, label: 'Experiência', value: '4+ anos em desenvolvimento' },
-    { icon: <Award className="text-yellow-400" size={20} />, label: 'Certificação', value: 'Oracle Certified Professional' },
-    { icon: <Award className="text-yellow-400" size={20} />, label: 'Licenciatura', value: 'Licenciado em Informática' },
+    { icon: <User className="text-blue-400" size={20} />, label: t('about.name'), value: t('about.nameValue') },
+    { icon: <MapPin className="text-green-400" size={20} />, label: t('about.location'), value: t('about.locationValue') },
+    { icon: <Calendar className="text-purple-400" size={20} />, label: t('about.experience'), value: t('about.experienceValue') },
+    { icon: <Award className="text-yellow-400" size={20} />, label: t('about.certification'), value: t('about.certificationValue') },
+    { icon: <Award className="text-yellow-400" size={20} />, label: t('about.degree'), value: t('about.degreeValue') },
   ];
 
   const highlights = [
     {
       icon: <Code2 className="text-blue-500" size={24} />,
-      title: 'Full Stack Developer',
-      description: 'Especialista em React, Django, React Native e desenvolvimento mobile'
+      title: t('about.fullStackDev'),
+      description: t('about.fullStackDesc')
     },
     {
       icon: <Globe className="text-green-500" size={24} />,
-      title: 'CEO & Líder Técnico',
-      description: 'Gestão de equipas até 50 colaboradores e desenvolvimento de soluções empresariais'
+      title: t('about.ceoLeader'),
+      description: t('about.ceoDesc')
     },
     {
       icon: <Award className="text-purple-500" size={24} />,
-      title: 'Inovação Tecnológica',
-      description: 'Criação de plataformas integradas para contact centers e gestão empresarial'
+      title: t('about.techInnovation'),
+      description: t('about.techDesc')
     }
   ];
 
@@ -39,10 +42,10 @@ const About: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-4 font-mono">
-            &lt;Sobre/&gt;
+            &lt;{t('about.title')}/&gt;
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Conheça mais sobre minha trajetória e experiência profissional
+            {t('about.subtitle')}
           </p>
         </motion.div>
 
@@ -97,20 +100,16 @@ const About: React.FC = () => {
           >
             <div className="glass-effect p-6 rounded-lg">
               <h3 className="text-2xl font-bold text-white mb-4 font-mono">
-                Apresentação
+                {t('about.presentationTitle')}
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Engenheiro de Software e Desenvolvedor Web/Mobile com sólida experiência em programação, 
-                gestão de equipas e desenvolvimento de soluções inovadoras para contact centers e gestão empresarial.
+                {t('about.presentation1')}
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Especialista em React Native e Computação Móvel, com domínio avançado de Linux, Django, 
-                desenvolvimento web full stack, redes e integração de sistemas.
+                {t('about.presentation2')}
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Reconhecido pela criatividade, capacidade de liderança e entrega de projetos de alto impacto. 
-                Busco uma posição desafiante na Europa para contribuir com soluções tecnológicas de ponta 
-                e crescer em ambientes internacionais dinâmicos.
+                {t('about.presentation3')}
               </p>
             </div>
 

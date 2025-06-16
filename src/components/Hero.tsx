@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Code, Smartphone, Server } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -39,7 +42,7 @@ const Hero: React.FC = () => {
           className="max-w-4xl mx-auto"
         >
           <motion.div variants={itemVariants} className="mb-8">
-            <span className="text-blue-400 font-mono text-lg">Olá, eu sou</span>
+            <span className="text-blue-400 font-mono text-lg">{t('hero.greeting')}</span>
           </motion.div>
 
           <motion.h1
@@ -53,15 +56,14 @@ const Hero: React.FC = () => {
             variants={itemVariants}
             className="text-2xl md:text-3xl text-gray-300 mb-8 font-mono"
           >
-            Engenheiro de Software & CEO
+            {t('hero.title')}
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
             className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Especialista em desenvolvimento web e mobile com experiência em liderança de equipas. 
-            Criador de soluções inovadoras para contact centers e gestão empresarial.
+            {t('hero.description')}
           </motion.p>
 
           <motion.div
@@ -70,15 +72,15 @@ const Hero: React.FC = () => {
           >
             <div className="flex items-center space-x-2 glass-effect px-4 py-2 rounded-lg">
               <Code className="text-blue-400" size={20} />
-              <span className="text-white font-mono">Full Stack</span>
+              <span className="text-white font-mono">{t('hero.fullstack')}</span>
             </div>
             <div className="flex items-center space-x-2 glass-effect px-4 py-2 rounded-lg">
               <Smartphone className="text-green-400" size={20} />
-              <span className="text-white font-mono">Mobile</span>
+              <span className="text-white font-mono">{t('hero.mobile')}</span>
             </div>
             <div className="flex items-center space-x-2 glass-effect px-4 py-2 rounded-lg">
               <Server className="text-purple-400" size={20} />
-              <span className="text-white font-mono">DevOps</span>
+              <span className="text-white font-mono">{t('hero.devops')}</span>
             </div>
           </motion.div>
 
@@ -92,7 +94,7 @@ const Hero: React.FC = () => {
               href="#projects"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-mono font-semibold transition-colors animate-glow"
             >
-              Ver Projetos
+              {t('hero.viewProjects')}
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.05 }}
@@ -100,7 +102,7 @@ const Hero: React.FC = () => {
               href="#contact"
               className="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-mono font-semibold transition-colors"
             >
-              Contactar
+              {t('hero.contact')}
             </motion.a>
           </motion.div>
         </motion.div>

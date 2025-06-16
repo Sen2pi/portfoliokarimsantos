@@ -2,13 +2,23 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Smartphone, Globe, Server, Gamepad2 } from 'lucide-react';
 import { projects } from '../data/projects';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Projects: React.FC = () => {
+  const { t, currentLanguage } = useLanguage();
   const [filter, setFilter] = useState<'all' | 'web' | 'mobile' | 'fullstack' | 'game'>('all');
 
   const filteredProjects = filter === 'all'
     ? projects
     : projects.filter(project => project.category === filter);
+
+  const getTranslatedTitle = (project: any) => {
+    return project.title[currentLanguage] || project.title.pt;
+  };
+
+  const getTranslatedDescription = (project: any) => {
+    return project.description[currentLanguage] || project.description.pt;
+  };
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -21,9 +31,9 @@ const Projects: React.FC = () => {
 
   const getStatusText = (status: string) => {
     switch (status) {
-      case 'live': return 'Online';
-      case 'development': return 'Em Desenvolvimento';
-      case 'testing': return 'Em Testes';
+      case 'live': return t('projects.online');
+      case 'development': return t('projects.development');
+      case 'testing': return t('projects.testing');
       default: return 'Inativo';
     }
   };
@@ -48,10 +58,10 @@ const Projects: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-4 font-mono">
-            &lt;Projetos/&gt;
+            &lt;{t('projects.title')}/&gt;
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Uma seleção dos meus trabalhos mais recentes e impactantes
+            {t('projects.subtitle')}
           </p>
         </motion.div>
 
@@ -63,11 +73,11 @@ const Projects: React.FC = () => {
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {[
-            { key: 'all', label: 'Todos', icon: '🌟' },
-            { key: 'web', label: 'Web', icon: '🌐' },
-            { key: 'mobile', label: 'Mobile', icon: '📱' },
-            { key: 'fullstack', label: 'Full Stack', icon: '⚡' },
-            { key: 'game', label: 'Jogos', icon: '🎮' },
+            { key: 'all', label: t('projects.all'), icon: '🌟' },
+            { key: 'web', label: t('projects.web'), icon: '🌐' },
+            { key: 'mobile', label: t('projects.mobile'), icon: '📱' },
+            { key: 'fullstack', label: t('projects.fullstack'), icon: '⚡' },
+            { key: 'game', label: t('projects.games'), icon: '🎮' },
           ].map((filterOption) => (
             <motion.button
               key={filterOption.key}
@@ -102,10 +112,9 @@ const Projects: React.FC = () => {
               <div className="relative h-48 bg-gradient-to-br from-blue-600 to-purple-600 overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={getTranslatedTitle(project)}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   onError={(e) => {
-                    // Fallback se a imagem não carregar
                     const target = e.target as HTMLImageElement;
                     target.style.display = 'none';
                     const parent = target.parentElement;
@@ -132,7 +141,7 @@ const Projects: React.FC = () => {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-semibold text-white font-mono">
-                    {project.title}
+                    {getTranslatedTitle(project)}
                   </h3>
                   <div className="flex items-center space-x-1 text-gray-400">
                     {getCategoryIcon(project.category)}
@@ -140,7 +149,7 @@ const Projects: React.FC = () => {
                 </div>
 
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">
-                  {project.description}
+                  {getTranslatedDescription(project)}
                 </p>
 
                 {/* Tecnologias */}
@@ -155,7 +164,7 @@ const Projects: React.FC = () => {
                   ))}
                   {project.technologies.length > 4 && (
                     <span className="text-gray-500 text-xs font-mono">
-                      +{project.technologies.length - 4} mais
+                      +{project.technologies.length - 4} {currentLanguage === 'pt' ? 'mais' : currentLanguage === 'en' ? 'more' : currentLanguage === 'fr' ? 'plus' : currentLanguage === 'es' ? 'más' : currentLanguage === 'de' ? 'mehr' : 'altri'}
                     </span>
                   )}
                 </div>
@@ -171,7 +180,7 @@ const Projects: React.FC = () => {
                       className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-mono transition-colors"
                     >
                       <ExternalLink size={14} />
-                      <span>Ver Site</span>
+                      <span>{t('projects.viewSite')}</span>
                     </motion.a>
                   )}
 
@@ -184,7 +193,7 @@ const Projects: React.FC = () => {
                       className="flex items-center space-x-2 border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 px-4 py-2 rounded text-sm font-mono transition-colors"
                     >
                       <Github size={14} />
-                      <span>Código</span>
+                      <span>{t('projects.code')}</span>
                     </motion.a>
                   )}
                 </div>
@@ -201,17 +210,17 @@ const Projects: React.FC = () => {
           className="mt-16 bg-gray-900 rounded-lg p-6"
         >
           <h3 className="text-xl font-semibold text-white mb-6 font-mono text-center">
-            📱 Apps Mobile em Teste
+            📱 {t('projects.mobileApps')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="text-center">
               <h4 className="text-white font-mono mb-2">Memoriza+</h4>
-              <p className="text-gray-400 text-sm mb-2">App para técnicas de memorização</p>
+              <p className="text-gray-400 text-sm mb-2">{t('projects.memoriza')}</p>
               <code className="text-blue-400 text-xs">memorizamais@googlegroups.com</code>
             </div>
             <div className="text-center">
               <h4 className="text-white font-mono mb-2">PocketCV</h4>
-              <p className="text-gray-400 text-sm mb-2">Criação de currículos profissionais</p>
+              <p className="text-gray-400 text-sm mb-2">{t('projects.pocketcv')}</p>
               <code className="text-blue-400 text-xs">pocketCV@googlegroups.com</code>
             </div>
           </div>

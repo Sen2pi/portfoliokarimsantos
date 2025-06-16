@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Github, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSelector from './LanguageSelector';
+
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,13 +18,13 @@ const Header: React.FC = () => {
   }, []);
 
   const navItems = [
-    { name: 'Início', href: '#hero' },
-    { name: 'Sobre', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projetos', href: '#projects' },
-    { name: 'Experiência', href: '#experience' },
-    { name: 'Certificados', href: '#certifications' },
-    { name: 'Contacto', href: '#contact' },
+    { name: t('nav.home'), href: '#hero' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.skills'), href: '#skills' },
+    { name: t('nav.projects'), href: '#projects' },
+    { name: t('nav.experience'), href: '#experience' },
+    { name: t('nav.certifications'), href: '#certifications' },
+    { name: t('nav.contact'), href: '#contact' },
   ];
 
   return (
@@ -55,8 +58,9 @@ const Header: React.FC = () => {
             ))}
           </div>
 
-          {/* Social Links */}
+          {/* Right Side: Language Selector + Social Links */}
           <div className="hidden md:flex items-center space-x-4">
+            <LanguageSelector />
             <motion.a
               whileHover={{ scale: 1.2, rotate: 360 }}
               href="https://github.com/Sen2pi"
@@ -72,11 +76,7 @@ const Header: React.FC = () => {
               <Mail size={20} />
             </motion.a>
           </div>
- {/* Right Side: Language Selector + Social Links */}
-          <div className="hidden md:flex items-center space-x-4">
-            {/* Language Selector */}
-            <LanguageSelector />
-          </div>
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -103,6 +103,9 @@ const Header: React.FC = () => {
                 {item.name}
               </a>
             ))}
+            <div className="mt-4 pt-4 border-t border-gray-600">
+              <LanguageSelector />
+            </div>
           </motion.div>
         )}
       </nav>

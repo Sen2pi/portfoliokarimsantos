@@ -4,6 +4,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import { LanguageProvider } from "./contexts/LanguageContext";
 import GitActivity from "./components/GitActivity";
 import Contact from "./components/Contact";
 import "./styles/globals.css";
@@ -12,28 +13,30 @@ import Certifications from "./components/Certifications";
 
 function App() {
   return (
-    <div className="bg-gray-900 min-h-screen">
-      <Header />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <GitActivity />
-      <Certifications /> {/* ✅ Adiciona aqui */}
-      <Contact />
-      {/* Footer */}
-      <footer className="bg-gray-800 py-8 text-center border-t border-gray-700">
-        <div className="container mx-auto px-6">
-          <p className="text-gray-400 font-mono">
-            © 2025 Karim Santos. Feito em React + Vite + TypeScript
-          </p>
-          <p className="text-gray-500 text-sm mt-2">
-            Engenheiro de Software | CEO | Full Stack Developer
-          </p>
-        </div>
-      </footer>
-    </div>
+    <LanguageProvider>
+      <div className="bg-gray-900 min-h-screen">
+        <Header />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Certifications />
+        <GitActivity />
+        <Contact />
+        {/* Footer */}
+        <footer className="bg-gray-800 py-8 text-center border-t border-gray-700">
+          <div className="container mx-auto px-6">
+            <p className="text-gray-400 font-mono">
+              © 2025 Karim Santos. Feito em React + Vite + TypeScript
+            </p>
+            <p className="text-gray-500 text-sm mt-2">
+              Engenheiro de Software | CEO | Full Stack Developer
+            </p>
+          </div>
+        </footer>
+      </div>
+    </LanguageProvider>
   );
 }
 
