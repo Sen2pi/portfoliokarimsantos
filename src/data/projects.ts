@@ -284,5 +284,5 @@ export const projects: Project[] = [
     image: '/kpcloud.png',
     category: 'fullstack',
     status: 'live'
-  }
+  },
 ];
