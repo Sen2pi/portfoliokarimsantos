@@ -46,7 +46,7 @@ const Experience: React.FC = () => {
         it: 'Laurea in Informatica'
       },
       institution: 'Universidade da Maia',
-      year: '2022',
+      year: '2022 - 2025',
       status: t('experience.completed')
     },
     {
@@ -59,7 +59,7 @@ const Experience: React.FC = () => {
         it: 'Oracle Certified Professional'
       },
       institution: 'Rumos',
-      year: '2021',
+      year: '2020 - 2021',
       status: t('experience.completed')
     },
     {
@@ -72,7 +72,7 @@ const Experience: React.FC = () => {
         it: 'Psicologia'
       },
       institution: 'Universidade Católica Portuguesa',
-      year: '2013',
+      year: '2010 - 2013',
       status: t('experience.completed')
     }
   ];
