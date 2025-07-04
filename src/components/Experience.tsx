@@ -25,6 +25,19 @@ const Experience: React.FC = () => {
   const education = [
     {
       degree: {
+        pt: 'Mestrado em Engenharia Informática e Tecnologias Web',
+        en: 'Master in Computer Engineering and Web Technologies',
+        fr: 'Master en Ingénierie Informatique et Technologies Web',
+        es: 'Máster en Ingeniería Informática y Tecnologías Web',
+        de: 'Master in Informatik und Webtechnologien',
+        it: 'Master in Ingegneria Informatica e Tecnologie Web'
+      },
+      institution: 'Universidade Aberta',
+      year: '2025',
+      status: t('experience.inProgress')
+    },
+    {
+      degree: {
         pt: 'Licenciatura em Informática',
         en: 'Bachelor in Computer Science',
         fr: 'Licence en Informatique',
@@ -33,8 +46,8 @@ const Experience: React.FC = () => {
         it: 'Laurea in Informatica'
       },
       institution: 'Universidade da Maia',
-      year: '2025',
-      status: t('experience.inProgress')
+      year: '2024',
+      status: t('experience.completed')
     },
     {
       degree: {

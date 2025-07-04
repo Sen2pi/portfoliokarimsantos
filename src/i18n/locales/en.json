@@ -58,7 +58,19 @@
     "current": "Current",
     "education": "Education",
     "achievements": "Key Achievements",
-    "technologies": "Technologies"
+    "technologies": "Technologies",
+    "inProgress": "In Progress",
+    "completed": "Completed",
+    "professional": "Professional Experience",
+    "careerSummary": "Career Summary",
+    "totalExperience": "Total Experience",
+    "years": "12+ years",
+    "teamManaged": "Team Managed",
+    "people": "50+ people",
+    "projectsLed": "Projects Led",
+    "projects": "15+ projects",
+    "certifications": "Certifications",
+    "oracle": "Oracle OCP"
   },
   "gitActivity": {
     "title": "GitActivity",
