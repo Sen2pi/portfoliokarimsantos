@@ -285,4 +285,29 @@ export const projects: Project[] = [
     category: 'fullstack',
     status: 'live'
   },
+  {
+    id: '13',
+    title: {
+      pt: 'Bloquinho',
+      en: 'Bloquinho',
+      fr: 'Bloquinho',
+      es: 'Bloquinho',
+      de: 'Bloquinho',
+      it: 'Bloquinho'
+    },
+    description: {
+      pt: 'WebApp profissional de workspace inspirada no Notion, desenvolvida em Flutter. Oferece edição rica de texto, gestão de base de dados, agenda integrada, sincronização em nuvem e 100% de privacidade.',
+      en: 'Professional workspace WebApp inspired by Notion, developed in Flutter. Offers rich text editing, database management, integrated agenda, cloud synchronization and 100% privacy.',
+      fr: 'WebApp professionnelle de workspace inspirée par Notion, développée en Flutter. Offre une édition de texte riche, une gestion de base de données, une agenda intégrée, une synchronisation cloud et 100% de confidentialité.',
+      es: 'WebApp profesional de workspace inspirada en Notion, desarrollada en Flutter. Ofrece edición rica de texto, gestión de base de datos, agenda integrada, sincronización en la nube y 100% de privacidad.',
+      de: 'Professionelle Workspace-WebApp inspiriert von Notion, entwickelt in Flutter. Bietet Rich-Text-Bearbeitung, Datenbankverwaltung, integrierte Agenda, Cloud-Synchronisation und 100% Privatsphäre.',
+      it: 'WebApp professionale di workspace ispirata a Notion, sviluppata in Flutter. Offre editing di testo ricco, gestione database, agenda integrata, sincronizzazione cloud e 100% privacy.'
+    },
+    technologies: ['Flutter', 'Dart', 'JavaScript', 'CSS', 'Swift', 'Kotlin', 'C', 'CMake'],
+    liveUrl: 'https://bloquinho.kpsolucoes.pt/',
+    githubUrl: 'https://github.com/Sen2pi/Bloquinho',
+    image: '/bloquinho.png',
+    category: 'fullstack',
+    status: 'live'
+  },
 ];

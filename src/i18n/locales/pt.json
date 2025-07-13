@@ -45,7 +45,7 @@
       "game": "Jogos"
     },
     "viewSite": "Ver Site",
-    "viewCode": "Código",
+    "code": "Código",
     "status": {
       "live": "Online",
       "development": "Em Desenvolvimento",
