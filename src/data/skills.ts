@@ -38,6 +38,12 @@ export const skills: Skill[] = [
     category: 'frontend', 
     icon: 'css3' 
   },
+  { 
+    name: 'Material UI', 
+    level: 80, 
+    category: 'frontend', 
+    icon: 'materialui' 
+  },
 
   // Backend
   { 
@@ -70,6 +76,12 @@ export const skills: Skill[] = [
     category: 'backend', 
     icon: 'nodejs' 
   },
+  { 
+    name: 'Spring Boot', 
+    level: 85, 
+    category: 'backend', 
+    icon: 'springboot' 
+  },
 
   // Mobile
   { 
@@ -97,6 +109,12 @@ export const skills: Skill[] = [
     level: 80, 
     category: 'database', 
     icon: 'postgresql' 
+  },
+  { 
+    name: 'H2', 
+    level: 75, 
+    category: 'database', 
+    icon: 'h2' 
   },
 
   // Tools

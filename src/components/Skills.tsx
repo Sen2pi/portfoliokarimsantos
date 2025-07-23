@@ -22,7 +22,10 @@ import {
   SiNginx,
   SiSharp,
   SiUnity,
+  SiSpringboot,
+  SiMui,
 } from "react-icons/si";
+import { FaLeaf } from "react-icons/fa";
 
 const Skills: React.FC = () => {
   const { t } = useLanguage();
@@ -55,7 +58,10 @@ const Skills: React.FC = () => {
       docker: <SiDocker className="text-blue-400" />,
       android: <SiAndroid className="text-green-500" />,
       nginx: <SiNginx className="text-green-600" />,
-      unity: <SiUnity className="text-gray-300" />
+      unity: <SiUnity className="text-gray-300" />,
+      springboot: <SiSpringboot className="text-green-500" />,
+      materialui: <SiMui className="text-blue-500" />,
+      h2: <FaLeaf className="text-green-400" />
     };
     return iconMap[iconName] || <span className="text-2xl">💻</span>;
   };
