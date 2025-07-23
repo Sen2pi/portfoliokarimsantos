@@ -25,6 +25,7 @@ const Projects: React.FC = () => {
       case 'live': return 'bg-green-500';
       case 'development': return 'bg-yellow-500';
       case 'testing': return 'bg-blue-500';
+      case 'completed': return 'bg-green-600';
       default: return 'bg-gray-500';
     }
   };
@@ -34,6 +35,7 @@ const Projects: React.FC = () => {
       case 'live': return t('projects.online');
       case 'development': return t('projects.development');
       case 'testing': return t('projects.testing');
+      case 'completed': return t('projects.completed');
       default: return 'Inativo';
     }
   };
