@@ -310,4 +310,28 @@ export const projects: Project[] = [
     category: 'fullstack',
     status: 'live'
   },
+  {
+    id: '14',
+    title: {
+      pt: 'TCMTreino',
+      en: 'TCMTreino',
+      fr: 'TCMTreino',
+      es: 'TCMTreino',
+      de: 'TCMTreino',
+      it: 'TCMTreino'
+    },
+    description: {
+      pt: 'Sistema de Gestão de Tesouraria e Garantias desenvolvido em Spring Boot. Plataforma empresarial para gestão financeira, com autenticação JWT, mensageria Kafka e interface moderna.',
+      en: 'Treasury & Collateral Management System developed in Spring Boot. Enterprise platform for financial management, with JWT authentication, Kafka messaging and modern interface.',
+      fr: 'Système de Gestion de Trésorerie et Garanties développé en Spring Boot. Plateforme d\'entreprise pour la gestion financière, avec authentification JWT, messagerie Kafka et interface moderne.',
+      es: 'Sistema de Gestión de Tesorería y Garantías desarrollado en Spring Boot. Plataforma empresarial para gestión financiera, con autenticación JWT, mensajería Kafka e interfaz moderna.',
+      de: 'Treasury & Collateral Management System entwickelt in Spring Boot. Unternehmensplattform für Finanzmanagement, mit JWT-Authentifizierung, Kafka-Messaging und moderner Oberfläche.',
+      it: 'Sistema di Gestione Tesoreria e Garanzie sviluppato in Spring Boot. Piattaforma aziendale per la gestione finanziaria, con autenticazione JWT, messaggistica Kafka e interfaccia moderna.'
+    },
+    technologies: ['Spring Boot', 'Java', 'JWT', 'Kafka', 'PostgreSQL', 'React', 'JPA', 'H2', 'Docker', 'Zookeeper', 'JavaScript', 'Material-UI', 'Maven', 'Spring Security'],
+    githubUrl: 'https://github.com/Sen2pi/TCMTreino',
+    image: '/TCMTreino.png',
+    category: 'fullstack',
+    status: 'development'
+  },
 ];
