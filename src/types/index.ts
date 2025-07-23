@@ -28,7 +28,7 @@ export interface Project {
   githubUrl?: string;
   image: string;
   category: 'web' | 'mobile' | 'fullstack' | 'game';
-  status: 'live' | 'development' | 'testing';
+  status: 'live' | 'development' | 'testing' | 'completed';
 }
 
 export interface Experience {

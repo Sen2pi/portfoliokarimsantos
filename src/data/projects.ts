@@ -332,6 +332,6 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Sen2pi/TCMTreino',
     image: '/TCMTreino.png',
     category: 'fullstack',
-    status: 'development'
+    status: 'completed'
   },
 ];
