@@ -12,7 +12,7 @@ import "./styles/globals.css";
 import "./i18n"; // Importar configuração i18n
 import Certifications from "./components/Certifications";
 import TransitionOverlay from './components/TransitionOverlay';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react";
 
 const sectionMap: Record<string, { name: string; props?: string }> = {
   '#hero': { name: 'Hero' },
