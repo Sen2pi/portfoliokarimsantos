@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Github, Send, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import AnimatedSectionTitle from './AnimatedSectionTitle';
+import AnimatedBubblesBackground from './AnimatedBubblesBackground';
 
 const Contact: React.FC = () => {
   const { t } = useLanguage();
@@ -77,8 +78,9 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-800">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-20 bg-gray-800 relative overflow-hidden">
+      <AnimatedBubblesBackground />
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

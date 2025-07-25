@@ -4,6 +4,7 @@ import { ExternalLink, Github, Smartphone, Globe, Server, Gamepad2 } from 'lucid
 import { projects } from '../data/projects';
 import { useLanguage } from '../contexts/LanguageContext';
 import AnimatedSectionTitle from './AnimatedSectionTitle';
+import AnimatedBubblesBackground from './AnimatedBubblesBackground';
 
 const Projects: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
@@ -52,8 +53,9 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-gray-800">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-20 bg-gray-800 relative overflow-hidden">
+      <AnimatedBubblesBackground />
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

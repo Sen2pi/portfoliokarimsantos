@@ -4,6 +4,7 @@ import { Briefcase, Calendar, MapPin, Users, Code, Award } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { experience } from '../data/experience';
 import AnimatedSectionTitle from './AnimatedSectionTitle';
+import AnimatedBubblesBackground from './AnimatedBubblesBackground';
 
 const Experience: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
@@ -186,8 +187,9 @@ const Experience: React.FC = () => {
   };
 
   return (
-    <section id="experience" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-6">
+    <section id="experience" className="py-20 bg-gray-900 relative overflow-hidden">
+      <AnimatedBubblesBackground />
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
