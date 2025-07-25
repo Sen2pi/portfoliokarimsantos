@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X, Github, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSelector from './LanguageSelector';
 import '../styles/menu3d.css';
-import TransitionOverlay from './TransitionOverlay';
 
 interface HeaderProps {
   onNavClick: (href: string) => void;
