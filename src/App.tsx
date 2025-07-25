@@ -12,6 +12,7 @@ import "./styles/globals.css";
 import "./i18n"; // Importar configuração i18n
 import Certifications from "./components/Certifications";
 import TransitionOverlay from './components/TransitionOverlay';
+import { Analytics } from "@vercel/analytics/next"
 
 const sectionMap: Record<string, { name: string; props?: string }> = {
   '#hero': { name: 'Hero' },
@@ -49,6 +50,7 @@ const App: React.FC = () => {
 
   return (
     <LanguageProvider>
+      <Analytics />
       <TransitionOverlay show={showTransition} onComplete={handleTransitionComplete} section={transitionSection} />
       <div className="bg-gray-900 min-h-screen">
         <Header onNavClick={triggerTransition} />
