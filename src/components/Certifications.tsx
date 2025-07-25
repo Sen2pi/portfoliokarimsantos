@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Award } from "lucide-react";
+import AnimatedSectionTitle from './AnimatedSectionTitle';
 
 const Certifications: React.FC = () => {
   useEffect(() => {
@@ -284,7 +285,7 @@ const Certifications: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-4 font-mono">
-            &lt;Certificações/&gt;
+            <AnimatedSectionTitle text="<Certificações/>" className="text-4xl" />
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             {allCredentials.length} certificações profissionais verificadas

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { User, MapPin, Calendar, Award, Globe, Code2 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import AnimatedSectionTitle from './AnimatedSectionTitle';
 
 const About: React.FC = () => {
   const { t } = useLanguage();
@@ -42,7 +43,7 @@ const About: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-4 font-mono">
-            &lt;{t('about.title')}/&gt;
+            <AnimatedSectionTitle text={`<${t('about.title')}/>`} className="text-4xl" />
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             {t('about.subtitle')}

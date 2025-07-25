@@ -27,11 +27,19 @@ const Hero: React.FC = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
-      {/* Animated Background */}
+      {/* Animated Bubbles Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-        <div className="absolute top-3/4 right-1/4 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-1/4 left-1/2 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{animationDelay: '4s'}}></div>
+        {/* Bubbles animadas */}
+        <div className="bubble bubble-1"></div>
+        <div className="bubble bubble-2"></div>
+        <div className="bubble bubble-3"></div>
+        <div className="bubble bubble-4"></div>
+        <div className="bubble bubble-5"></div>
+        <div className="bubble bubble-6"></div>
+        <div className="bubble bubble-7"></div>
+        <div className="bubble bubble-8"></div>
+        <div className="bubble bubble-9"></div>
+        <div className="bubble bubble-10"></div>
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
@@ -77,11 +85,7 @@ const Hero: React.FC = () => {
             <div className="flex items-center space-x-2 glass-effect px-4 py-2 rounded-lg">
               <Smartphone className="text-green-400" size={20} />
               <span className="text-white font-mono">{t('hero.mobile')}</span>
-            </div>
-            <div className="flex items-center space-x-2 glass-effect px-4 py-2 rounded-lg">
-              <Server className="text-purple-400" size={20} />
-              <span className="text-white font-mono">{t('hero.devops')}</span>
-            </div>
+            </div>  
           </motion.div>
 
           <motion.div

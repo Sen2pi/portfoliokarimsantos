@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GitBranch, GitCommit, GitMerge, Star, ExternalLink } from 'lucide-react';
+import AnimatedSectionTitle from './AnimatedSectionTitle';
 
 const GitActivity: React.FC = () => {
   // Dados simulados de atividade Git
@@ -142,7 +143,7 @@ const GitActivity: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-4 font-mono">
-            &lt;GitActivity/&gt;
+            <AnimatedSectionTitle text="<GitActivity/>" className="text-4xl" />
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Atividade de desenvolvimento e contribuições no GitHub

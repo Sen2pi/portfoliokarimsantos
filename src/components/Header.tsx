@@ -1,13 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Github, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSelector from './LanguageSelector';
+import '../styles/menu3d.css';
+import TransitionOverlay from './TransitionOverlay';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onNavClick: (href: string) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onNavClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { t } = useLanguage();
+  const [activeSection, setActiveSection] = useState<string>('hero');
+
+  // IDs das seções
+  const sectionIds = [
+    'hero',
+    'about',
+    'skills',
+    'projects',
+    'experience',
+    'certifications',
+    'contact',
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,15 +35,42 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Detectar seção ativa
+  useEffect(() => {
+    const handleSectionScroll = () => {
+      let current = 'hero';
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 80 && rect.bottom > 80) {
+            current = id;
+            break;
+          }
+        }
+      }
+      setActiveSection(current);
+    };
+    window.addEventListener('scroll', handleSectionScroll);
+    handleSectionScroll();
+    return () => window.removeEventListener('scroll', handleSectionScroll);
+  }, []);
+
   const navItems = [
-    { name: t('nav.home'), href: '#hero' },
-    { name: t('nav.about'), href: '#about' },
-    { name: t('nav.skills'), href: '#skills' },
-    { name: t('nav.projects'), href: '#projects' },
-    { name: t('nav.experience'), href: '#experience' },
-    { name: t('nav.certifications'), href: '#certifications' },
-    { name: t('nav.contact'), href: '#contact' },
+    { name: t('nav.home'), href: '#hero', id: 'hero' },
+    { name: t('nav.about'), href: '#about', id: 'about' },
+    { name: t('nav.skills'), href: '#skills', id: 'skills' },
+    { name: t('nav.projects'), href: '#projects', id: 'projects' },
+    { name: t('nav.experience'), href: '#experience', id: 'experience' },
+    { name: t('nav.certifications'), href: '#certifications', id: 'certifications' },
+    { name: t('nav.contact'), href: '#contact', id: 'contact' },
   ];
+
+  // Função para lidar com clique nos links do menu
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    onNavClick(href);
+  };
 
   return (
     <motion.header
@@ -46,16 +91,27 @@ const Header: React.FC = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                whileHover={{ scale: 1.1 }}
-                className="text-gray-300 hover:text-white transition-colors font-mono"
-              >
-                {item.name}
-              </motion.a>
-            ))}
+            {navItems.map((item) => {
+              const isActive = activeSection === item.id;
+              return (
+                <div
+                  key={item.name}
+                  className="relative group"
+                >
+                  <a
+                    href={item.href}
+                    className={`menu3d-btn${isActive ? ' menu3d-active' : ''}`}
+                    onClick={e => handleNavClick(e, item.href)}
+                  >
+                    <span>{item.name}</span>
+                  </a>
+                  {/* Linha animada apenas no hover */}
+                  <span
+                    className="absolute left-0 -bottom-1 w-full h-0.5 rounded bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"
+                  />
+                </div>
+              );
+            })}
           </div>
 
           {/* Right Side: Language Selector + Social Links */}

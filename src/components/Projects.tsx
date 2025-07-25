@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github, Smartphone, Globe, Server, Gamepad2 } from 'lucide-react';
 import { projects } from '../data/projects';
 import { useLanguage } from '../contexts/LanguageContext';
+import AnimatedSectionTitle from './AnimatedSectionTitle';
 
 const Projects: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
@@ -60,7 +61,7 @@ const Projects: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-4 font-mono">
-            &lt;{t('projects.title')}/&gt;
+            <AnimatedSectionTitle text={`<${t('projects.title')}/>`} className="text-4xl" />
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             {t('projects.subtitle')}

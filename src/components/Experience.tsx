@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Briefcase, Calendar, MapPin, Users, Code, Award } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { experience } from '../data/experience';
+import AnimatedSectionTitle from './AnimatedSectionTitle';
 
 const Experience: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
@@ -194,7 +195,7 @@ const Experience: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-4 font-mono">
-            &lt;{t('experience.title')}/&gt;
+            <AnimatedSectionTitle text={`<${t('experience.title')}/>`} className="text-4xl" />
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             {t('experience.subtitle')}

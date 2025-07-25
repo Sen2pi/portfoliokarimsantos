@@ -1,0 +1,94 @@
+/* Efeito 3D animado para links do menu */
+.menu3d-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border-radius: 0.4em;
+  background: rgba(139, 92, 246, 0.1); /* roxo transparente */
+  color: #a78bfa;
+  font-weight: 500;
+  font-family: 'Varela Round', 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+.menu3d-btn span {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: normal;
+}
+.menu3d-btn::before,
+.menu3d-btn::after {
+  --z: 0px;
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: inherit;
+  opacity: 0;
+  z-index: 1;
+  mix-blend-mode: screen;
+  transform-style: preserve-3d;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+}
+.menu3d-btn::before {
+  background: rgba(139, 92, 246, 0.3); /* roxo transparente */
+}
+.menu3d-btn::after {
+  background: rgba(59, 130, 246, 0.3); /* azul transparente */
+}
+/* Efeito 3D apenas quando ativo/selecionado */
+.menu3d-btn.menu3d-active {
+  background: rgba(236, 72, 153, 0.2); /* rosa transparente */
+  color: #f3e8ff;
+  border-color: rgba(236, 72, 153, 0.4);
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+}
+.menu3d-btn.menu3d-active::before {
+  --z: 0.04;
+  opacity: 0.8;
+  animation: menu3d-wobble 2.2s ease forwards;
+}
+.menu3d-btn.menu3d-active::after {
+  --z: -0.06;
+  opacity: 0.8;
+  animation: menu3d-wobble 2.2s ease forwards;
+}
+@keyframes menu3d-wobble {
+  0% {
+    opacity: 0;
+    transform: translate3d(calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
+  }
+  16% {
+    transform: translate3d(calc(var(--z) * 160px), calc(var(--z) * 160px), calc(var(--z) * 160px));
+  }
+  28% {
+    opacity: 1;
+    transform: translate3d(calc(var(--z) * 70px), calc(var(--z) * 70px), calc(var(--z) * 70px));
+  }
+  44% {
+    transform: translate3d(calc(var(--z) * 130px), calc(var(--z) * 130px), calc(var(--z) * 130px));
+  }
+  59% {
+    transform: translate3d(calc(var(--z) * 85px), calc(var(--z) * 85px), calc(var(--z) * 85px));
+  }
+  73% {
+    transform: translate3d(calc(var(--z) * 110px), calc(var(--z) * 110px), calc(var(--z) * 110px));
+  }
+  88% {
+    opacity: 1;
+    transform: translate3d(calc(var(--z) * 90px), calc(var(--z) * 90px), calc(var(--z) * 90px));
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(calc(var(--z) * 100px), calc(var(--z) * 100px), calc(var(--z) * 100px));
+  }
+} 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Github, Send, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import AnimatedSectionTitle from './AnimatedSectionTitle';
 
 const Contact: React.FC = () => {
   const { t } = useLanguage();
@@ -85,7 +86,7 @@ const Contact: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-4 font-mono">
-            &lt;{t('contact.title')}/&gt;
+            <AnimatedSectionTitle text={`<${t('contact.title')}/>`} className="text-4xl" />
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             {t('contact.subtitle')}

@@ -26,6 +26,7 @@ import {
   SiMui,
 } from "react-icons/si";
 import { FaLeaf } from "react-icons/fa";
+import AnimatedSectionTitle from './AnimatedSectionTitle';
 
 const Skills: React.FC = () => {
   const { t } = useLanguage();
@@ -128,7 +129,7 @@ const Skills: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-4 font-mono">
-            &lt;{t('skills.title')}/&gt;
+            <AnimatedSectionTitle text={`<${t('skills.title')}/>`} className="text-4xl" />
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             {t('skills.subtitle')}
