@@ -4,12 +4,12 @@ export const experience: Experience[] = [
   {
     id: '1',
     title: {
-      pt: 'CEO & Lead Developer',
-      en: 'CEO & Lead Developer',
-      fr: 'PDG & Développeur Principal',
-      es: 'CEO y Desarrollador Principal',
-      de: 'CEO & Leitender Entwickler',
-      it: 'CEO e Lead Developer'
+      pt: 'Lead Developer',
+      en: 'Lead Developer',
+      fr: 'Développeur Principal',
+      es: 'Desarrollador Principal',
+      de: 'Leitender Entwickler',
+      it: 'Lead Developer'
     },
     company: 'KPS - Karim Patatas Soluções',
     period: {
@@ -71,7 +71,7 @@ export const experience: Experience[] = [
         "Gestione dell'infrastruttura Linux e delle reti, garantendo alta disponibilità e sicurezza"
       ]
     },
-    technologies: ['React', 'Django', 'React Native', 'Linux', 'MySQL', 'Python', 'API', 'NGINX']
+    technologies: ['React', 'Django', 'React Native', 'Linux', 'MySQL', 'Python', 'API', 'NGINX', 'Docker', 'Git', 'Jira', 'XLDeploy','Spring Boot', 'Java']
   },
   {
     id: '2',
