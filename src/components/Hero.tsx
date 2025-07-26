@@ -60,7 +60,13 @@ const Hero: React.FC = () => {
             Karim <span className="gradient-text">Santos</span>
           </motion.h1>
 
- 
+          <motion.h2
+            variants={itemVariants}
+            className="text-2xl md:text-3xl text-gray-300 mb-8 font-mono"
+          >
+            {t('hero.title')}
+          </motion.h2>
+
           <motion.p
             variants={itemVariants}
             className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
