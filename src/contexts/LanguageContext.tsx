@@ -50,7 +50,7 @@ const translations: { [key: string]: { [key: string]: string } } = {
 
     // Hero
     'hero.greeting': 'Olá, eu sou',
-    'hero.title': 'Engenheiro de Software & CEO',
+    'hero.title': 'Fullstack Developer',
     'hero.description': 'Especialista em desenvolvimento web e mobile com experiência em liderança de equipas. Criador de soluções inovadoras para contact centers e gestão empresarial.',
     'hero.fullstack': 'Full Stack',
     'hero.mobile': 'Mobile',
@@ -211,7 +211,7 @@ const translations: { [key: string]: { [key: string]: string } } = {
 
     // Hero
     'hero.greeting': 'Hello, I am',
-    'hero.title': 'Software Engineer & CEO',
+    'hero.title': 'Fullstack Developer',
     'hero.description': 'Specialist in web and mobile development with team leadership experience. Creator of innovative solutions for contact centers and business management.',
     'hero.fullstack': 'Full Stack',
     'hero.mobile': 'Mobile',
@@ -372,7 +372,7 @@ const translations: { [key: string]: { [key: string]: string } } = {
 
     // Hero
     'hero.greeting': 'Bonjour, je suis',
-    'hero.title': 'Ingénieur Logiciel & PDG',
+    'hero.title': 'Développeur Fullstack',
     'hero.description': 'Spécialiste en développement web et mobile avec expérience en leadership d\'équipes. Créateur de solutions innovantes pour centres d\'appels et gestion d\'entreprise.',
     'hero.fullstack': 'Full Stack',
     'hero.mobile': 'Mobile',
@@ -533,7 +533,7 @@ const translations: { [key: string]: { [key: string]: string } } = {
 
     // Hero
     'hero.greeting': 'Hola, soy',
-    'hero.title': 'Ingeniero de Software & CEO',
+    'hero.title': 'Desarrollador Fullstack',
     'hero.description': 'Especialista en desarrollo web y móvil con experiencia en liderazgo de equipos. Creador de soluciones innovadoras para centros de contacto y gestión empresarial.',
     'hero.fullstack': 'Full Stack',
     'hero.mobile': 'Móvil',
@@ -694,7 +694,7 @@ const translations: { [key: string]: { [key: string]: string } } = {
 
     // Hero
     'hero.greeting': 'Hallo, ich bin',
-    'hero.title': 'Software-Ingenieur & CEO',
+    'hero.title': 'Full Stack Entwickler',
     'hero.description': 'Spezialist für Web- und Mobile-Entwicklung mit Erfahrung in Teamführung. Entwickler innovativer Lösungen für Contact Center und Unternehmensführung.',
     'hero.fullstack': 'Full Stack',
     'hero.mobile': 'Mobile',
@@ -855,7 +855,7 @@ const translations: { [key: string]: { [key: string]: string } } = {
 
     // Hero
     'hero.greeting': 'Ciao, sono',
-    'hero.title': 'Ingegnere Software & CEO',
+    'hero.title': 'Sviluppatore Full Stack',
     'hero.description': 'Specialista nello sviluppo web e mobile con esperienza nella leadership di team. Creatore di soluzioni innovative per contact center e gestione aziendale.',
     'hero.fullstack': 'Full Stack',
     'hero.mobile': 'Mobile',
