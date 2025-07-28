@@ -21,6 +21,7 @@ export const projects: Project[] = [
     },
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     liveUrl: 'https://destinatur.vercel.app/',
+    githubUrl: 'https://github.com/Sen2pi/destinatur',
     image: '/Divertour.png',
     category: 'web',
     status: 'live'
@@ -46,6 +47,7 @@ export const projects: Project[] = [
     technologies: ['React', 'Node', 'PostgreSQL'],
     liveUrl: 'https://ajudaaqui.pt/',
     image: '/Ajudaaqui.png',
+    githubUrl: 'https://github.com/Sen2pi/ajudaaqui',
     category: 'fullstack',
     status: 'live'
   },
@@ -69,6 +71,7 @@ export const projects: Project[] = [
     },
     technologies: ['React', 'MySQL', 'Linux'],
     liveUrl: 'https://opah.pt/',
+    githubUrl: 'https://github.com/Sen2pi/opahpt',
     image: '/opah.pt.png',
     category: 'fullstack',
     status: 'live'
@@ -93,6 +96,7 @@ export const projects: Project[] = [
     },
     technologies: ['React', 'Django', 'React Native', 'API'],
     liveUrl: 'https://www.kpsolucoes.pt/',
+    githubUrl: 'https://github.com/Sen2pi/kpsolucoes',
     image: '/kpsolucoes.png',
     category: 'fullstack',
     status: 'live'
@@ -117,6 +121,7 @@ export const projects: Project[] = [
     },
     technologies: ['React', 'Nginx', 'React Native', 'API', 'Swagger', 'PostgreSQL', 'MySQL', 'Express', 'Linux', 'Node.js'],
     liveUrl: 'https://dispatcheur-cc.fr/',
+    githubUrl: 'https://github.com/Sen2pi/Dispatcheur-CC',
     image: '/Dispatcheur.png',
     category: 'fullstack',
     status: 'live'
@@ -141,6 +146,7 @@ export const projects: Project[] = [
     },
     technologies: ['React', 'JavaScript', 'CSS'],
     liveUrl: 'https://princesanails.vercel.app/',
+    githubUrl: 'https://github.com/Sen2pi/princesanails',
     image: '/Princesa.png',
     category: 'web',
     status: 'live'
@@ -166,6 +172,7 @@ export const projects: Project[] = [
     technologies: ['React Native', 'Kotlin', 'Android'],
     image: '/mem+.png',
     category: 'mobile',
+    githubUrl: 'https://github.com/IACartoesFlash/Memoriza-',
     status: 'testing'
   },
   {
@@ -188,6 +195,7 @@ export const projects: Project[] = [
     },
     technologies: ['React Native', 'Kotlin', 'Android'],
     image: '/pocketcv.png',
+    githubUrl: 'https://github.com/Sen2pi/pocketCV',
     category: 'mobile',
     status: 'testing'
   },
@@ -257,6 +265,7 @@ export const projects: Project[] = [
     },
     technologies: ['React', 'Vite', 'JavaScript', 'CSS'],
     liveUrl: 'https://portfoliokarimsantos.vercel.app/',
+    githubUrl: 'https://github.com/Sen2pi/portfoliokarimsantos',
     image: '/portfolio.png',
     category: 'web',
     status: 'live'
@@ -281,6 +290,7 @@ export const projects: Project[] = [
     },
     technologies: ['React', 'JavaScript', 'CSS'],
     liveUrl: 'https://github.com/Sen2pi/KPCloud',
+    githubUrl: 'https://github.com/Sen2pi/KPCloud',
     image: '/kpcloud.png',
     category: 'fullstack',
     status: 'live'
