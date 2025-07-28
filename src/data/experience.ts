@@ -4,23 +4,83 @@ export const experience: Experience[] = [
   {
     id: '1',
     title: {
-      pt: 'Lead Developer',
-      en: 'Lead Developer',
-      fr: 'Développeur Principal',
-      es: 'Desarrollador Principal',
-      de: 'Leitender Entwickler',
-      it: 'Lead Developer'
+      pt: 'Desenvolvedor Full Stack',
+      en: 'Full Stack Developer',
+      fr: 'Développeur Full Stack',
+      es: 'Desarrollador Full Stack',
+      de: 'Full Stack Entwickler',
+      it: 'Sviluppatore Full Stack'
     },
-    company: 'KPS - Karim Patatas Soluções',
+    company: 'KPS Portugal',
     period: {
-      pt: '2016 - Presente',
-      en: '2016 - Present',
-      fr: '2016 - Présent',
-      es: '2016 - Presente',
-      de: '2016 - Gegenwart',
-      it: '2016 - Presente'
+      pt: 'março 2021 - Presente',
+      en: 'March 2021 - Present',
+      fr: 'mars 2021 - Présent',
+      es: 'marzo 2021 - Presente',
+      de: 'März 2021 - Gegenwart',
+      it: 'marzo 2021 - Presente'
     },
     current: true,
+    description: {
+      pt: [
+        'Liderança no desenvolvimento de soluções web e mobile para call center francófono, melhorando tempos de resposta ao cliente em 35%',
+        'Implementação de APIs robustas usando Java (Spring Boot) e Node.js; melhoria da experiência front-end com React',
+        'Introdução de pipelines CI/CD com Docker e Kubernetes, reduzindo tempo de deployment em 50%',
+        'Colaboração com equipas multifuncionais e orientação técnica em ambiente multilíngue'
+      ],
+      en: [
+        'Led development of web and mobile solutions for French-speaking call center, improving customer response times by 35%',
+        'Implemented robust back-end APIs using Java (Spring Boot) and Node.js; enhanced front-end experience with React',
+        'Introduced CI/CD pipelines with Docker and Kubernetes, reducing deployment time by 50%',
+        'Collaborated with cross-functional teams and provided technical guidance in a multilingual environment'
+      ],
+      fr: [
+        'Dirigé le développement de solutions web et mobiles pour un centre d\'appels francophone, améliorant les temps de réponse client de 35%',
+        'Implémenté des APIs robustes utilisant Java (Spring Boot) et Node.js; amélioré l\'expérience front-end avec React',
+        'Introduit des pipelines CI/CD avec Docker et Kubernetes, réduisant le temps de déploiement de 50%',
+        'Collaboré avec des équipes multifonctionnelles et fourni des conseils techniques dans un environnement multilingue'
+      ],
+      es: [
+        'Lideré el desarrollo de soluciones web y móviles para centro de llamadas francófono, mejorando tiempos de respuesta al cliente en 35%',
+        'Implementé APIs robustas usando Java (Spring Boot) y Node.js; mejoré la experiencia front-end con React',
+        'Introduje pipelines CI/CD con Docker y Kubernetes, reduciendo tiempo de deployment en 50%',
+        'Colaboré con equipos multifuncionales y proporcioné orientación técnica en ambiente multilingüe'
+      ],
+      de: [
+        'Führte die Entwicklung von Web- und Mobile-Lösungen für ein französischsprachiges Call Center an und verbesserte die Kundenreaktionszeiten um 35%',
+        'Implementierte robuste Back-End-APIs mit Java (Spring Boot) und Node.js; verbesserte die Front-End-Erfahrung mit React',
+        'Einführung von CI/CD-Pipelines mit Docker und Kubernetes, wodurch die Bereitstellungszeit um 50% reduziert wurde',
+        'Zusammenarbeit mit funktionsübergreifenden Teams und technische Beratung in einer mehrsprachigen Umgebung'
+      ],
+      it: [
+        'Guidato lo sviluppo di soluzioni web e mobile per call center francofono, migliorando i tempi di risposta al cliente del 35%',
+        'Implementato API robuste utilizzando Java (Spring Boot) e Node.js; migliorato l\'esperienza front-end con React',
+        'Introdotto pipeline CI/CD con Docker e Kubernetes, riducendo il tempo di deployment del 50%',
+        'Collaborato con team multifunzionali e fornito orientamento tecnico in ambiente multilingue'
+      ]
+    },
+    technologies: ['Java', 'Spring Boot', 'React', 'Node.js', 'Docker', 'Kubernetes', 'CI/CD', 'API', 'Git', 'Jira']
+  },
+  {
+    id: '2',
+    title: {
+      pt: 'Gerente Técnico',
+      en: 'Technical Manager',
+      fr: 'Manager Technique',
+      es: 'Gerente Técnico',
+      de: 'Technischer Manager',
+      it: 'Manager Tecnico'
+    },
+    company: 'KPS Portugal',
+    period: {
+      pt: 'março 2016 - março 2021',
+      en: 'March 2016 - March 2021',
+      fr: 'mars 2016 - mars 2021',
+      es: 'marzo 2016 - marzo 2021',
+      de: 'März 2016 - März 2021',
+      it: 'marzo 2016 - marzo 2021'
+    },
+    current: false,
     description: {
       pt: [
         'Liderança de equipas multidisciplinares e gestão operacional de contact center com até 50 colaboradores',
@@ -71,10 +131,10 @@ export const experience: Experience[] = [
         "Gestione dell'infrastruttura Linux e delle reti, garantendo alta disponibilità e sicurezza"
       ]
     },
-    technologies: ['React', 'Django', 'React Native', 'Linux', 'MySQL', 'Python', 'API', 'NGINX', 'Docker', 'Git', 'Jira', 'XLDeploy','Spring Boot', 'Java']
+    technologies: ['React', 'Django', 'React Native', 'Linux', 'MySQL', 'Python', 'API', 'NGINX', 'Docker', 'Git', 'Jira', 'XLDeploy', 'Spring Boot', 'Java']
   },
   {
-    id: '2',
+    id: '3',
     title: {
       pt: 'Engenheiro de Suporte Aplicacional',
       en: 'Application Support Engineer',
@@ -132,7 +192,7 @@ export const experience: Experience[] = [
     technologies: ['Java', 'Shell Script', 'Linux', 'Git', 'Jira', 'Docker', 'XLDeploy']
   },
   {
-    id: '3',
+    id: '4',
     title: {
       pt: 'Coordenador Operacional',
       en: 'Operations Coordinator',
@@ -178,7 +238,7 @@ export const experience: Experience[] = [
     technologies: ['Gestão', 'KPIs', 'Produtividade', 'Análise de Dados']
   },
   {
-    id: '4',
+    id: '5',
     title: {
       pt: 'Operador de CallCenter',
       en: 'CallCenter Operator',
