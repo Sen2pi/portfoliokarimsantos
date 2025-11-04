@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CV Europass – Karim Hussen Patatas Hassam dos Santos</title>
+    <!-- Font Awesome para os ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", "Arial", sans-serif;
+        background-color: #f8fbff;
+        color: #222;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        background: #fff;
+        max-width: 850px;
+        margin: 20px auto;
+        border-radius: 12px;
+        box-shadow: 0 2px 16px rgba(30, 96, 156, 0.1);
+        padding: 36px 44px 44px 44px;
+        border-top: 10px solid #1e60a2;
+      }
+      .header {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      .header img {
+        width: 150px;
+        height: 180px;
+        object-fit: cover;
+        background: #e9f2fc;
+        border-radius: 12px;
+        border: 2px solid #1e60a2;
+      }
+      .header-content h1 {
+        color: #1e60a2;
+        font-size: 2.1em;
+        margin: 0 0 9px 0;
+      }
+      .info-table {
+        font-size: 1em;
+        color: #1e60a2;
+        background: #ecf5fc;
+        border-radius: 8px;
+        padding: 14px;
+        margin-bottom: 20px;
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .info-table td {
+        padding: 4px 12px 4px 0;
+        vertical-align: top;
+      }
+      .info-table i {
+        color: #1e60a2;
+        width: 20px;
+        text-align: center;
+        margin-right: 8px;
+        font-size: 1.1em;
+      }
+      .info-table a {
+        color: #1e60a2;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .info-table a:hover {
+        color: #46a0ff;
+        text-decoration: underline;
+      }
+      h2 {
+        color: #1e60a2;
+        margin-top: 36px;
+        border-bottom: 2px solid #91caff;
+        padding-bottom: 2px;
+        font-size: 1.35em;
+        margin-bottom: 12px;
+      }
+      h3 {
+        color: #2a78c5;
+        font-size: 1.19em;
+        margin-top: 22px;
+      }
+      .section {
+        margin-bottom: 25px;
+      }
+      ul {
+        margin-top: 6px;
+        margin-bottom: 13px;
+      }
+      .skills-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #ecf5fc;
+        border-radius: 8px;
+        margin-bottom: 14px;
+      }
+      .skills-table td {
+        padding: 6px 12px;
+        font-size: 1em;
+      }
+      .skills-table th {
+        font-weight: 700;
+        color: #1e60a2;
+        background: #deecfa;
+        padding: 5px 10px;
+      }
+      .language-bar {
+        background: #deecfa;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #91caff;
+        height: 28px;
+        position: relative;
+        overflow: hidden;
+      }
+      .language-progress {
+        height: 100%;
+        background: linear-gradient(135deg, #46a0ff 0%, #1e60a2 100%);
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 0.95em;
+        font-weight: 600;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+      .europass-footer {
+        text-align: right;
+        color: #aaa;
+        font-size: 0.94em;
+        margin-top: 38px;
+        border-top: 1px solid #91caff;
+        padding-top: 8px;
+      }
+
+      /* Estilos específicos para impressão */
+      @media print {
+        body {
+          background: #fff;
+          color: #000;
+          font-size: 12pt;
+        }
+        .container {
+          box-shadow: none;
+          border-radius: 0;
+          margin: 0;
+          padding: 20px;
+          max-width: 100%;
+        }
+        .info-table i {
+          color: #1e60a2 !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        .info-table a {
+          color: #1e60a2 !important;
+          text-decoration: none !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        .info-table a:after {
+          content: " (" attr(href) ")";
+          font-size: 0.9em;
+          color: #666;
+        }
+        .language-bar {
+          background: #e0e0e0 !important;
+          border: 1px solid #666 !important;
+          height: 28px !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        .language-progress {
+          background: #1e60a2 !important;
+          background: linear-gradient(
+            135deg,
+            #46a0ff 0%,
+            #1e60a2 100%
+          ) !important;
+          color: #fff !important;
+          font-weight: 600 !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        h1,
+        h2,
+        h3 {
+          color: #1e60a2 !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        .info-table,
+        .skills-table {
+          background: #f5f5f5 !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        .skills-table th {
+          background: #e0e0e0 !important;
+          color: #1e60a2 !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        .container {
+          border-top: 8px solid #1e60a2 !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <img
+          src="1000006385.jpg"
+          alt="Foto de Karim Hussen Patatas Hassam dos Santos"
+        />
+        <div class="header-content">
+          <h1>Karim Hussen Patatas Hassam dos Santos</h1>
+          <table class="info-table">
+            <tr>
+              <td><i class="fas fa-map-marker-alt"></i></td>
+              <td>
+                Rua padre Raul de assis N°459, 4820-477 Golães, Fafe, Portugal
+              </td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-envelope"></i></td>
+              <td>dr.karim.patatas@gmail.com</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-phone"></i></td>
+              <td>+351 925 542 328</td>
+            </tr>
+            <tr>
+              <td><i class="fab fa-linkedin"></i></td>
+              <td>
+                <a href="https://linkedin.com/in/k-patatas" target="_blank"
+                  >linkedin.com/in/k-patatas</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><i class="fab fa-github"></i></td>
+              <td>
+                <a href="https://github.com/Sen2pi" target="_blank"
+                  >github.com/Sen2pi</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-briefcase"></i></td>
+              <td>
+                <a
+                  href="https://portfoliokarimsantos.vercel.app"
+                  target="_blank"
+                  >portfoliokarimsantos.vercel.app</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-birthday-cake"></i></td>
+              <td>4 de Janeiro de 1990</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-flag"></i></td>
+              <td>Portuguesa</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- Apresentação -->
+      <div class="section">
+        <h2>Perfil Profissional</h2>
+        <p>
+          Fullstack Developer motivado pela procura constante de aprendizagem,
+          evolução pessoal e superação dos próprios limites todos os dias.<br />
+          Para além das competências técnicas em <b>React Native</b>,
+          <b>Java</b>, <b>Spring/Spring Boot</b>, <b>Linux</b> e <b>Django</b>,
+          comprometo-me a ampliar continuamente os meus conhecimentos em
+          integração de sistemas, desenvolvimento web full stack e nas mais
+          recentes práticas e arquiteturas.<br />
+          Curioso e proativo, encaro cada projeto como uma oportunidade de
+          crescimento, de experimentar novas soluções e de contribuir para a
+          melhoria contínua das equipas e produtos. Esta postura diária de
+          aprendizagem impulsiona-me a adotar uma abordagem inovadora, a procurar a
+          excelência e gerar um impacto positivo e duradouro em organizações
+          dinâmicas e inovadoras.
+        </p>
+      </div>
+
+      <!-- Experiências Profissionais -->
+      <div class="section">
+        <h2>Experiências Profissionais</h2>
+
+        <h3>
+          KPSPORTUGAL (03/2021 – Presente) &mdash; Desenvolvedor Full Stack
+        </h3>
+        <ul>
+          <li>
+            Liderança no desenvolvimento de soluções web e mobile para call center francófono, melhorando tempos de resposta ao cliente em 35%.
+          </li>
+          <li>
+            Implementação de APIs robustas usando Java (Spring Boot) e Node.js; melhoria da experiência front-end com React.
+          </li>
+          <li>
+            Introdução de pipelines CI/CD com Docker e Kubernetes, reduzindo tempo de deployment em 50%.
+          </li>
+          <li>
+            Colaboração com equipas multifuncionais e orientação técnica em ambiente multilíngue.
+          </li>
+          <li>
+            <b>Stack técnico: </b> Java, Spring Boot, React, Node.js, Docker, Kubernetes, CI/CD, API, Git, Jira.
+          </li>
+        </ul>
+
+        <h3>
+          KPSPORTUGAL (03/2016 – 03/2021) &mdash; Gerente Técnico
+        </h3>
+        <ul>
+          <li>
+            Liderança de equipas multidisciplinares e gestão operacional de contact center com até 50 colaboradores.
+          </li>
+          <li>
+            Desenvolvimento de plataforma própria integrando gestão de empresas de reboques e contact center.
+          </li>
+          <li>
+            Otimização de fluxos de trabalho e redução de custos operacionais.
+          </li>
+          <li>
+            Implementação de soluções web e mobile em Django e React Native.
+          </li>
+          <li>
+            Integração de sistemas de telefonia e automação de processos.
+          </li>
+          <li>
+            Gestão de infraestrutura Linux e redes, garantindo alta disponibilidade e segurança.
+          </li>
+          <li>
+            <b>Stack técnico: </b> React, Django, React Native, Linux, MySQL, Python, API, NGINX, Docker, Git, Jira, XLDeploy, Spring Boot, Java.
+          </li>
+        </ul>
+
+        <h3>
+          Natixis (12/2022 – 06/2023) &mdash; Engenheiro de Suporte Aplicacional
+        </h3>
+        <ul>
+          <li>
+            Suporte de aplicações bancárias críticas (alta disponibilidade,
+            fiabilidade, segurança financeira).
+          </li>
+          <li>
+            Automatização &amp; supervisão de processos via <b>Java</b>,
+            <b>Shell/Bash</b>; gestão proativa de incidentes críticos.
+          </li>
+          <li>
+            Resolução técnica, manutenção e melhoria contínua de sistemas
+            (ambientes variados).
+          </li>
+          <li>
+            Colaboração com equipas internacionais (FR/PT), gestão de tickets
+            (<b>JIRA</b>), documentação técnica, otimização de fluxos de
+            trabalho.
+          </li>
+          <li>
+            <b>Stack técnico: </b> Java, Shell (Bash), SQL, Linux, JIRA,
+            ferramentas de monitorização e ticketing, arquiteturas distribuídas.
+          </li>
+        </ul>
+
+        <h3>Randstad (04/2014 – 03/2016) &mdash; Coordenador Operacional</h3>
+        <ul>
+          <li>
+            Coordenação de equipas; acompanhamento de KPIs financeiros e TI,
+            melhoria contínua.
+          </li>
+          <li>
+            Migração de plataformas de atendimento,
+            otimização/configuração/testing de ferramentas.
+          </li>
+          <li>
+            <b>Stack técnico: </b> Gestão de KPIs, relatórios automatizados,
+            gestão de BD, plataformas de call center.
+          </li>
+        </ul>
+
+        <h3>AcordoTango (07/2012 – 04/2014) &mdash; Gestor de Projeto</h3>
+        <ul>
+          <li>
+            Implementação de sistemas tecnológicos logísticos (cartografia,
+            geolocalização de veículos).
+          </li>
+          <li>
+            Integração de ferramentas de apoio à decisão, interfaces dedicadas.
+          </li>
+        </ul>
+
+        <h3>
+          Apple (2018 – 2020) &mdash; Especialista de Suporte Apple
+        </h3>
+        <ul>
+          <li>
+            Suporte técnico especializado para produtos Apple (iPhone, iPad, Mac, Apple Watch, AirPods).
+          </li>
+          <li>
+            Diagnóstico e resolução de problemas de hardware e software em dispositivos iOS e macOS.
+          </li>
+          <li>
+            Assistência a clientes empresariais e consumidores finais em ambiente multilingue.
+          </li>
+          <li>
+            Formação e mentoria de novos especialistas de suporte técnico.
+          </li>
+          <li>
+            Colaboração com equipas de engenharia para identificação e resolução de bugs críticos.
+          </li>
+          <li>
+            Desenvolvimento de documentação técnica e guias de troubleshooting.
+          </li>
+          <li>
+            Suporte remoto e presencial para configuração e otimização de dispositivos Apple.
+          </li>
+          <li>
+            Gestão de casos complexos e escalação para equipas especializadas quando necessário.
+          </li>
+          <li>
+            <b>Stack técnico: </b> iOS, macOS, Apple Hardware, Troubleshooting, Technical Support, Customer Service, Remote Support, Hardware Diagnostics, Software Configuration.
+          </li>
+        </ul>
+
+        <h3>
+          IBM (05/2008 – 06/2012) &mdash; Suporte iOS/MacOS – Projeto Apple
+        </h3>
+        <ul>
+          <li>
+            Suporte técnico T1/T2 para produtos Apple (<b>iOS, MacOS</b>),
+            diagnóstico e resolução de incidentes.
+          </li>
+          <li>
+            Utilização de sistemas de ticketing e ferramentas Apple específicas.
+          </li>
+        </ul>
+      </div>
+      <!-- Formação -->
+      <div class="section">
+        <h2>Formação &amp; Certificações</h2>
+        <ul>
+          <li>
+            <b>Mestrado em Engenharia Informática e Tecnologias Web</b>
+            (presente) — Universidade Aberta
+          </li>
+          <li>
+            <b>Licenciatura em Engenharia Informática</b> (2022–2025) —
+            Universidade da Maia
+          </li>
+          <li>
+            <b>Full Stack Developer (Microsoft &amp; IBM via Coursera)</b>
+            (2025)
+          </li>
+          <li>
+            <b>CyberSecurity Professional</b> (Google via Coursera) (2024)
+          </li>
+          <li><b>Oracle Certified Professional</b> (Rumos, 2022)</li>
+          <li><b>Psicologia</b> (Universidade Católica Portuguesa, 2013)</li>
+        </ul>
+      </div>
+      <!-- Competências -->
+      <div class="section">
+        <h2>Competências Técnicas</h2>
+        <table class="skills-table">
+          <tr>
+            <th>Linguagens &amp; Frameworks</th>
+            <td>
+              Java (Spring Boot, Spring Security, JPA), Python (Django), JavaScript (React, React Native, VueJS, NextJS), TypeScript, C#, Kotlin, Swift, C++, Shell, Dart, Flutter
+            </td>
+          </tr>
+          <tr>
+            <th>Bases de Dados</th>
+            <td>PostgreSQL, MySQL, SQL avançado</td>
+          </tr>
+          <tr>
+            <th>Infraestrutura &amp; DevOps</th>
+            <td>
+              Linux, Docker, Kubernetes, Git, CI/CD, NGINX, Apache, Monitorização, scripts de automatização, Zookeeper, Kafka
+            </td>
+          </tr>
+          <tr>
+            <th>Mobile &amp; UI</th>
+            <td>React Native, Material UI, Figma</td>
+          </tr>
+          <tr>
+            <th>Ferramentas</th>
+            <td>JIRA, ferramentas de ticketing, relatórios automatizados</td>
+          </tr>
+          <tr>
+            <th>Metodologias</th>
+            <td>
+              Agile/Scrum, documentação técnica exaustiva, melhoria contínua
+            </td>
+          </tr>
+          <tr>
+            <th>Sistemas</th>
+            <td>Linux, Unix, Windows, MacOS, iOS</td>
+          </tr>
+          <tr>
+            <th>Segurança</th>
+            <td>CyberSegurança, administração segura, supervisão proativa</td>
+          </tr>
+        </table>
+      </div>
+      <!-- Idiomas -->
+      <div class="section">
+        <h2>Idiomas</h2>
+        <table class="skills-table">
+          <tr>
+            <th>Português</th>
+            <td>
+              <div class="language-bar">
+                <div class="language-progress" style="width: 100%">Nativo</div>
+              </div>
+            </td>
+            <th>Inglês</th>
+            <td>
+              <div class="language-bar">
+                <div class="language-progress" style="width: 100%">C2</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>Francês</th>
+            <td>
+              <div class="language-bar">
+                <div class="language-progress" style="width: 10%">Nativo</div>
+              </div>
+            </td>
+            <th>Espanhol</th>
+            <td>
+              <div class="language-bar">
+                <div class="language-progress" style="width: 65%">B2</div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- Rodapé Europass -->
+      <div class="europass-footer">
+        Documento gerado em 18 de julho de 2025 • Modelo Europass • Karim Hussen
+        Patatas Hassam dos Santos
+      </div>
+    </div>
+  </body>
+</html>

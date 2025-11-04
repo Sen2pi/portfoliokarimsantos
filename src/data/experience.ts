@@ -11,55 +11,55 @@ export const experience: Experience[] = [
       de: 'Full Stack Entwickler',
       it: 'Sviluppatore Full Stack'
     },
-    company: 'KPS Portugal',
+    company: 'Randstad Digital',
     period: {
-      pt: 'março 2021 - Presente',
-      en: 'March 2021 - Present',
-      fr: 'mars 2021 - Présent',
-      es: 'marzo 2021 - Presente',
-      de: 'März 2021 - Gegenwart',
-      it: 'marzo 2021 - Presente'
+      pt: 'agosto 2025 - Presente',
+      en: 'August 2025 - Present',
+      fr: 'août 2025 - Présent',
+      es: 'agosto 2025 - Presente',
+      de: 'August 2025 - Gegenwart',
+      it: 'agosto 2025 - Presente'
     },
     current: true,
     description: {
       pt: [
-        'Liderança no desenvolvimento de soluções web e mobile para call center francófono, melhorando tempos de resposta ao cliente em 35%',
-        'Implementação de APIs robustas usando Java (Spring Boot) e Node.js; melhoria da experiência front-end com React',
-        'Introdução de pipelines CI/CD com Docker e Kubernetes, reduzindo tempo de deployment em 50%',
-        'Colaboração com equipas multifuncionais e orientação técnica em ambiente multilíngue'
+        'Fullstack Developer na Randstad Digital para o Setor Financeiro e Seguradora da Société Générale Assurances',
+        'Desenvolvimento e manutenção em GraphTalk AIA para soluções de seguros',
+        'Colaboração com equipas funcionais e técnicas em ambiente internacional',
+        'Práticas ágeis, documentação funcional e suporte a produção'
       ],
       en: [
-        'Led development of web and mobile solutions for French-speaking call center, improving customer response times by 35%',
-        'Implemented robust back-end APIs using Java (Spring Boot) and Node.js; enhanced front-end experience with React',
-        'Introduced CI/CD pipelines with Docker and Kubernetes, reducing deployment time by 50%',
-        'Collaborated with cross-functional teams and provided technical guidance in a multilingual environment'
+        'Fullstack Developer at Randstad Digital for the Financial and Insurance Sector of Société Générale Assurances',
+        'Development and maintenance in GraphTalk AIA for insurance solutions',
+        'Collaboration with functional and technical teams in an international environment',
+        'Agile practices, functional documentation and production support'
       ],
       fr: [
-        'Dirigé le développement de solutions web et mobiles pour un centre d\'appels francophone, améliorant les temps de réponse client de 35%',
-        'Implémenté des APIs robustes utilisant Java (Spring Boot) et Node.js; amélioré l\'expérience front-end avec React',
-        'Introduit des pipelines CI/CD avec Docker et Kubernetes, réduisant le temps de déploiement de 50%',
-        'Collaboré avec des équipes multifonctionnelles et fourni des conseils techniques dans un environnement multilingue'
+        'Développeur Fullstack chez Randstad Digital pour le secteur financier et assurance de Société Générale Assurances',
+        'Développement et maintenance en GraphTalk AIA pour des solutions d’assurance',
+        'Collaboration avec des équipes fonctionnelles et techniques dans un environnement international',
+        'Pratiques agiles, documentation fonctionnelle et support à la production'
       ],
       es: [
-        'Lideré el desarrollo de soluciones web y móviles para centro de llamadas francófono, mejorando tiempos de respuesta al cliente en 35%',
-        'Implementé APIs robustas usando Java (Spring Boot) y Node.js; mejoré la experiencia front-end con React',
-        'Introduje pipelines CI/CD con Docker y Kubernetes, reduciendo tiempo de deployment en 50%',
-        'Colaboré con equipos multifuncionales y proporcioné orientación técnica en ambiente multilingüe'
+        'Desarrollador Fullstack en Randstad Digital para el sector financiero y asegurador de Société Générale Assurances',
+        'Desarrollo y mantenimiento en GraphTalk AIA para soluciones de seguros',
+        'Colaboración con equipos funcionales y técnicos en entorno internacional',
+        'Prácticas ágiles, documentación funcional y soporte a producción'
       ],
       de: [
-        'Führte die Entwicklung von Web- und Mobile-Lösungen für ein französischsprachiges Call Center an und verbesserte die Kundenreaktionszeiten um 35%',
-        'Implementierte robuste Back-End-APIs mit Java (Spring Boot) und Node.js; verbesserte die Front-End-Erfahrung mit React',
-        'Einführung von CI/CD-Pipelines mit Docker und Kubernetes, wodurch die Bereitstellungszeit um 50% reduziert wurde',
-        'Zusammenarbeit mit funktionsübergreifenden Teams und technische Beratung in einer mehrsprachigen Umgebung'
+        'Fullstack-Entwickler bei Randstad Digital für den Finanz- und Versicherungssektor von Société Générale Assurances',
+        'Entwicklung und Wartung in GraphTalk AIA für Versicherungslösungen',
+        'Zusammenarbeit mit funktionalen und technischen Teams in internationalem Umfeld',
+        'Agile Praktiken, funktionale Dokumentation und Produktionssupport'
       ],
       it: [
-        'Guidato lo sviluppo di soluzioni web e mobile per call center francofono, migliorando i tempi di risposta al cliente del 35%',
-        'Implementato API robuste utilizzando Java (Spring Boot) e Node.js; migliorato l\'esperienza front-end con React',
-        'Introdotto pipeline CI/CD con Docker e Kubernetes, riducendo il tempo di deployment del 50%',
-        'Collaborato con team multifunzionali e fornito orientamento tecnico in ambiente multilingue'
+        'Sviluppatore Fullstack presso Randstad Digital per il settore finanziario e assicurativo di Société Générale Assurances',
+        'Sviluppo e manutenzione in GraphTalk AIA per soluzioni assicurative',
+        'Collaborazione con team funzionali e tecnici in ambiente internazionale',
+        'Pratiche agili, documentazione funzionale e supporto alla produzione'
       ]
     },
-    technologies: ['Java', 'Spring Boot', 'React', 'Node.js', 'Docker', 'Kubernetes', 'CI/CD', 'API', 'Git', 'Jira']
+    technologies: ['GraphTalk AIA', 'Insurance', 'Financial Sector', 'Agile', 'Git', 'Jira']
   },
   {
     id: '2',

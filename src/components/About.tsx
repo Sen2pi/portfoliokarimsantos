@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, MapPin, Calendar, Award, Globe, Code2 } from 'lucide-react';
+import { User, MapPin, Calendar, Award, Globe, Code2, Briefcase } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import AnimatedSectionTitle from './AnimatedSectionTitle';
 import AnimatedBubblesBackground from './AnimatedBubblesBackground';
@@ -11,6 +11,7 @@ const About: React.FC = () => {
   const personalInfo = [
     { icon: <User className="text-blue-400" size={20} />, label: t('about.name'), value: t('about.nameValue') },
     { icon: <MapPin className="text-green-400" size={20} />, label: t('about.location'), value: t('about.locationValue') },
+    { icon: <Briefcase className="text-indigo-400" size={20} />, label: t('about.currentRole'), value: t('about.currentRoleValue') },
     { icon: <Calendar className="text-purple-400" size={20} />, label: t('about.experience'), value: t('about.experienceValue') },
     { icon: <Award className="text-yellow-400" size={20} />, label: t('about.certification'), value: t('about.certificationValue') },
     { icon: <Award className="text-yellow-400" size={20} />, label: t('about.degree'), value: t('about.degreeValue') },
@@ -77,7 +78,7 @@ const About: React.FC = () => {
             <div className="space-y-4">
               {personalInfo.map((info, index) => (
                 <motion.div
-                  key={info.label}
+                  key={`${String(info.label)}-${index}`}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
