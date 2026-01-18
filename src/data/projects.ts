@@ -344,4 +344,28 @@ export const projects: Project[] = [
     category: 'fullstack',
     status: 'completed'
   },
+  {
+    id: '15',
+    title: {
+      pt: 'CuidaHub',
+      en: 'CuidaHub',
+      fr: 'CuidaHub',
+      es: 'CuidaHub',
+      de: 'CuidaHub',
+      it: 'CuidaHub'
+    },
+    description: {
+      pt: 'Plataforma que conecta cuidadores informais, profissionais de saúde e empresas. Apoio emocional, gestão de cuidados e comunidade.',
+      en: 'Platform connecting informal caregivers, health professionals, and companies. Emotional support, care management, and community.',
+      fr: 'Plateforme reliant les aidants informels, les professionnels de santé et les entreprises. Soutien émotionnel, gestion des soins et communauté.',
+      es: 'Plataforma que conecta a cuidadores informales, profesionales de la salud y empresas. Apoyo emocional, gestión de cuidados y comunidad.',
+      de: 'Plattform, die informelle Pflegekräfte, Gesundheitsexperten und Unternehmen verbindet. Emotionale Unterstützung, Pflegemanagement und Gemeinschaft.',
+      it: 'Piattaforma che collega caregiver informali, professionisti sanitari e aziende. Supporto emotivo, gestione delle cure e comunità.'
+    },
+    technologies: ['React', 'Node.js', 'AI', 'HealthTech'],
+    liveUrl: 'https://cuidahub.kpsolucoes.pt/',
+    image: '/cuidahub.png',
+    category: 'fullstack',
+    status: 'live'
+  }
 ];
